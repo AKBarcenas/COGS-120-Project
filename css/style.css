@@ -1,0 +1,466 @@
+* /*ececec*/
+{
+	background-color:#fafafa;
+}
+
+img 
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: bottom;
+}
+
+html
+{
+	overflow: scroll;
+}
+
+#thumbnails img:hover {
+    opacity: 0.1;
+ 	transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+}
+
+#thumbnails img
+{
+	margin-bottom:20px;
+}
+
+h1
+{
+	font-size:20px;
+}
+
+h2 
+{
+	font-size:17px;
+}
+
+h3
+{
+	line-height: 2px;
+	font-size:15px;
+}
+
+hr
+{
+	margin:10px auto;
+}
+
+h6
+{
+	padding: 0;
+	margin: 0;
+	font-size: 28px;
+	font-weight: 200;
+	display:inline;
+}
+ 
+strong
+{
+	font-weight:bold;
+}
+
+.bold
+{
+	font-weight:bolder;
+}
+
+body
+{
+	font-family: Helvetica, sans-serif;
+	line-height: 20px;
+	letter-spacing: 0.3px;
+}
+ 
+p
+{
+}
+
+a, a:visited 
+{
+	color:black;
+	text-decoration:none;
+}
+
+a:hover 
+{
+	color:#fff;
+}
+
+/**** CLASSES ****/
+
+.container
+{
+	width: 940px;
+	margin: 50px auto 50px auto;
+}
+
+/*#E26A6A*/
+.construction 
+{
+	top:50%;
+	bottom:50%;
+	font-size:50px;
+}
+.active
+{
+	border-bottom: 5px solid #000;
+}
+
+.project_nav
+{
+	font-size:12px;
+}
+
+.project_leftnav
+{
+	font-size:12px;
+	float:right;
+}
+.fade 
+{
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+ 
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+.imgWrap 
+{
+  position: relative;
+}
+
+span.desc 
+{
+	font-size: 1.125em;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-style:normal;
+	line-height: 0;
+	color: #000; 
+	text-align: center;
+	width: 100%;
+	position:absolute;
+	top:45%;
+	opacity:0;	
+	filter:alpha(opacity=0); /* For IE8 and earlier */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+} 
+
+span.desc span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.desc_small
+{
+	font-size: 12px;
+	letter-spacing: 2px;
+	font-style:normal;
+	line-height: 0;
+	color: #000;  
+	text-align: center;
+	width: 100%;
+	position:absolute;
+	top:55%;
+	opacity:0;
+	filter:alpha(opacity=0); /* For IE8 and earlier */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;   
+}
+
+.imgWrap:hover .desc
+{
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;   
+}
+
+.imgWrap:hover .desc_small
+{
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;   
+}
+
+/**** IDS ****/ 
+
+#content img
+{
+	margin-bottom:20px;
+}
+#content img #post #this
+{
+	width:100%;
+}
+
+
+#aboutme
+{
+	font-size:14px;
+}
+
+
+#footer 
+{
+	text-align:center;
+	font-size:13px;
+	letter-spacing:2px;
+}
+
+/* TEST */
+.fixed {
+    position:fixed;
+    top:0;
+}
+
+.menu {
+    background:#345;
+    color:#FFF;
+    height:2em;
+    padding:.5em;
+    position:absolute;
+    top:50px;
+    width:100%;
+}
+
+.f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#main-menu-container {
+    text-align: center; /* Assuming your main layout is centered */
+}
+#main-menu {
+    display: inline-block;
+    width: 1024px; /* Your menu's width */
+}
+/* TESTEND */
+
+#nav
+{
+	vertical-align: text-top;
+	text-align:center;
+	width:100%;
+}
+
+#mad
+{
+	font-size:24px;
+	letter-spacing: 3px;
+}
+
+#this {
+	width:800px;
+}
+
+#post {
+	width:600px;
+}
+
+#that 	{
+	margin: 15px; 
+    width: 45%; 
+    min-width: 250px; 
+    /*box-shadow: 1px 1px 15px gray; */
+}
+
+.picright {
+	float:right;
+}
+.picleft {
+	float:left;
+}
+
+#thumbnails:hover
+{
+	opacity: 0.1;
+ 	transition: opacity .55s ease-in-out;
+	-moz-transition: opacity .55s ease-in-out;
+	-webkit-transition: opacity .55s ease-in-out;
+}
+
+#hello 
+{
+	font-size: 24px;
+	text-align:center;
+	margin: 50px auto 20px auto;
+	width: 650px;
+	font-weight:300;
+	line-height: 35px;
+	color:#4d4d4d;
+}
+
+#content 
+{
+	width: 650px;
+	display: block;
+	margin: 10px auto;
+	font-size:14px;
+}
+
+#mobile
+{
+	display: none;
+	text-align:center;
+}
+
+
+#content .left {
+	float: left;
+	width: 380px;
+	margin-right: 20px;
+}
+
+#content .right {
+	width: 220px;
+	margin-left: 400px;
+}
+
+/**** NAVIGATION ****/
+
+nav 
+{
+	display: inline block;
+	list-style: none;
+	text-align: center;
+	letter-spacing:2px;
+}
+
+nav li {
+	display: inline-block;
+	margin: 7px 20px 0 0;
+	vertical-align: text-top;
+}
+
+nav li a
+{
+	color: black;
+	display: block;
+	padding: 5px 0 4px 0;
+	transition: box-shadow 0.2s ease;
+	transition: all 0.2s;
+}
+
+nav li a:hover
+{
+	color: black;
+	padding: 5px 0 4px 0;
+	display: block;
+  	border-bottom: 5px solid #000;
+	transition: all 0.2s;
+}
+
+#mobile a:hover 
+{
+	color: black;
+	padding: 5px 0 4px 0;
+  	border-bottom: 5px solid #000;
+	transition: all 0.2s;
+
+}
+
+
+.navigationSpace {
+	padding-left:25px;
+}
+/**** ANIMATIONS ***/
+
+@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@-moz-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/**** RESPONSIVE ****/
+
+@media (max-width: 1200px) 
+{
+	#thumbnails img {
+		width: 800px;
+	}
+
+	.container {
+		width: 80%;
+		margin: 40px 10%;
+	}
+
+	#nav {
+		margin-bottom: 40px;
+	}
+
+	#hello {
+		width: 66%;
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 768px) 
+{
+	.desc_small {
+		display: none;
+	}
+
+	#thumbnails img {
+		width: 100%;
+	}
+
+	#content {
+		width:100%;
+		margin:0;
+		padding:0;
+	}
+}
+
+@media (max-width: 580px) 
+{
+	#nav, #hello, .desc_small {
+		display: none;
+	}
+
+	#mobile {
+		display: block;
+	}
+
+	#content img{
+		width:100%;
+	}
+
+	#mad {
+		font-style:bold;
+		font-size:25px;
+	}
+
+	.active {
+		border-bottom: 5px solid #000;
+	}
+
+}
