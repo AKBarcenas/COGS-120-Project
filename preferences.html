@@ -3,16 +3,6 @@
 
 <script language="javascript">
 
-var num = 50; //number of pixels before modifying styles
-
-$(window).bind('scroll', function () {
-    if ($(window).scrollTop() > num) {
-        $('#nav').addClass('fixed');
-    } else {
-        $('#nav').removeClass('fixed');	
-    }
-});
-
 </script>
 <head>
 	<meta charset="utf-8">
@@ -28,26 +18,24 @@ $(window).bind('scroll', function () {
 	<!--main begin-->
 	<div class="container">
 		<nav id="nav">
-			<li><a href="mad.pdf" target="_blank">RESUME</a></li>
-			<li><a class="active link" id="mad">MADELINE HSIA</a></li>
-			<li><a href="about.html" class="link">ABOUT</a></li>
+			<li><a href="chat.html" id="mad">BOT THING</a></li>
+			<li><a href="profile.html" class="link">PROFILE</a></li>
+
 		</nav>
 		<!--navigation for mobile-->
 		<nav id="mobile">
-			<a href="index.html" id="mad" class="active link">MADELINE HSIA</a>
+			<a href="index.html" id="mad" class="active link">BOT THING</a>
 			<br><br>
-			<a href="mad.pdf" target="_blank">RESUME</a>   
-			            <span class="navigationSpace"/>
-			<a href="about.html" class="link">ABOUT</a>
 		</nav>
 
 		<!--paragraph about me-->
-		<p class="fade" id="hello">I'm Mad, an aspiring UI designer and web developer located on Earth. I also love to write (code & beyond). <br>Website is still under construction!<!--<br>🚧 Website  under construction 🚧 --><!--&#10024;--></p>
-	<br><br>
-
-		<!--projects displayed-->
-		<div class="fade" id="thumbnails">
-		
+		<p class="fade" id="hello">Let's get you set up.</p>
+		<center>
+<h1>Preference 1</h1>
+<h1>Preference 2</h1>
+<h1>Preference 3</h1>
+<h1>Preference 4</h1>
+		<a href="chat.html">Start Chatting</a></center>
 		</div>
 	</div> 
 	<!--main end-->
