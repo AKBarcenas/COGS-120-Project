@@ -15,7 +15,7 @@
   },
   "license": "MIT",
 
-  "main": "index.js",
+  "main": "chat.js",
   "dependencies": {
     "express": "3.x"
   },
