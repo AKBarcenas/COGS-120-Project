@@ -1,16 +1,21 @@
 {
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
+  "name": "Food.AI",
+  "description": "Finding better food choices for you",
   "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
+  "author": "Team Asia",
+
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.5.1"
+  }
 
   "repository": {
   	"type": "git",
-  	"url": "https://github.com/StanfordHCI/cs147"
+  	"url": "https://github.com/AKBarcenas/COGS-120-Project"
   },
   "license": "MIT",
 
-  "main": "server.js",
+  "main": "chat.js",
   "dependencies": {
     "express": "3.x"
   },
