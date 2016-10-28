@@ -1,7 +1,3 @@
 exports.view = function(req, res){
-  
-
-
-
-res.render('chat');	
+	res.render('chat');	
 };
