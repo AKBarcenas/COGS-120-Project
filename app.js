@@ -12,12 +12,7 @@ var index = require('./routes/index');
 var project = require('./routes/project');
 var preferences = require('./routes/preferences');
 var chat = require('./routes/chat');
-
-
-
-
-
-
+var profile = require('./routes/profile');
 
 // Example route
 // var user = require('./routes/user');
@@ -47,7 +42,8 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/preferences', preferences.view);
-app.get('/project/:name', project.viewProject);
+// app.get('/project/:name', project.viewProject);
+app.get('/profile', profile.view);
 // Example route
 // app.get('/users', user.list);
 

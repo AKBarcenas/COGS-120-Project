@@ -20,7 +20,7 @@
 						padding: 0; 
 						box-sizing: border-box; 
 						}
-			body 		{font: 13px Helvetica, Arial; 
+			body 		{font: 13px; 
 						background-color: white;
 						}
 			form 		{
@@ -66,56 +66,34 @@
 		</style>
   </head>
   <body>
+  
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">Food.AI</a>
+		<a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
+		<a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+      	<a href="#" style="float: right; padding-right: 10px; padding-top: 15px; color: white;">Chat</a>
+    </div>
+   
+  </div>
+</nav>
 		<div class="section">
 			<div class="container">
-			<!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Food.AI</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+    
 							
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3" style="background-color: yellow; padding-top: 20px; padding-bottom: 50px;">
+					<div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
 						<ul id="messages">
-							<li> Hi there! What type of food are you feeling right now? </li>
+							<li> Hey! What type of food are you feeling right now? </li>
 						</ul>
 							
 						<div class="row">
 							<div class="col-md-12">
 								<form action=""">
-									<input id="m" autocomplete="off" style="width: 68%;"/>
-									<button style="width: 23%; border-radius: 5px;">Send</button>
+									<input id="m" autocomplete="off" style="width: 68%; max-width: 340px;"/>
+									<button style="width: 23%; border-radius: 5px; max-width: 120px;">Send</button>
 								</form>
 							</div>
 						</div>
