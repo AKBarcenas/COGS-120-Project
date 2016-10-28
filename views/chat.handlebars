@@ -21,7 +21,7 @@
 						box-sizing: border-box; 
 						}
 			body 		{font: 13px Helvetica, Arial; 
-						background-color: rgb(230,230,230);
+						background-color: white;
 						}
 			form 		{
 						padding: 3px; 
@@ -30,47 +30,93 @@
 						width: 100%;
 						}
    			form input 	{border: 10px; 
-   						padding: 10px; 
+   						padding: 10px;
+   						background-color: rgb(240,240,240);
+   						border-radius: 5px; 
 						}
 			form button {width: 9%; 
-						background: rgb(130,224,255); border: none; padding: 10px; 
+						background: rgb(15,133,237); 
+						border: none; 
+						padding: 10px; 
+						color: white;
 						}
 			#messages 	{list-style-type: none; 
 						margin: 0;
-						padding: 0; 
+						padding-bottom: 20px; 
 						}
-			#messages li {padding: 5px 10px;
-						float: left;
-						clear: both;	
-						background: rgb(230,230,230);	
-						border-radius: 5px;				
-						}
-			#messages li:nth-child(odd) {
-						background: rgb(15,133,237); 
+			#messages li {background: rgb(15,133,237); 
+						padding: 5px 10px;
+						max-width: 265px;
 						float: right;
 						clear: both;
 						color: white;
 						border-radius: 5px;
+						margin-top: 5px;		
 						}
+			#messages li:nth-child(odd) {
+						padding: 5px 10px;
+						float: left;
+						clear: both;	
+						background: rgb(230,230,230);	
+						color: black;
+						max-width: 265px;
+						border-radius: 5px;	
+						margin-top: 5px;
+						}	
 		</style>
   </head>
   <body>
 		<div class="section">
-			<div class="section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3" style="background-color: yellow;">
-		
-							<ul id="messages">
-							</ul>
+			<div class="container">
+			<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Food.AI</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
 							
-							<div class="row">
-								<div class="col-md-12">
-									<form action=""">
-										<input id="m" autocomplete="off" style="width: 68%;"/>
-										<button style="width: 30%;">Send</button>
-									</form>
-								</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3" style="background-color: yellow; padding-top: 20px; padding-bottom: 50px;">
+						<ul id="messages">
+							<li> Hi there! What type of food are you feeling right now? </li>
+						</ul>
+							
+						<div class="row">
+							<div class="col-md-12">
+								<form action=""">
+									<input id="m" autocomplete="off" style="width: 68%;"/>
+									<button style="width: 23%; border-radius: 5px;">Send</button>
+								</form>
 							</div>
 						</div>
 					</div>
