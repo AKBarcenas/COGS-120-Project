@@ -1,6 +1,8 @@
-lab4
+Food.AI 
 ====
+(name subject to change)
 
-Lab 4: Server-side backend web development
+Food.AI is revolutionary new method to discover restaurants and food around you. 
 
-Originally created by Scott Klemmer, Michael Bernstein, and a coalition of TAs. This version forked from https://github.com/IntroHCI/lab4 and modified by Philip Guo.
+Developed by Team Asian in Exploration 3PM
+Alex Barcenas, Madeleine Hsia, Albert Lin
