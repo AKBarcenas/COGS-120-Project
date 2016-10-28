@@ -1,25 +1,26 @@
 {
-  "name": "Food.AI",
-  "description": "Finding better food choices for you",
+  "name": "Food AI",
   "version": "0.0.1",
   "author": "Team Asia",
 
-  "dependencies": {
-    "express": "^4.10.2",
-    "socket.io": "^1.5.1"
-  },
-
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/AKBarcenas/COGS-120-Project"
+    "type": "git",
+    "url": "https://github.com/IntroHCI/lab4"
   },
   "license": "MIT",
 
-  "main": "chat.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
-    "express": "3.x"
+    "express": "3.x",
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
+    "socket.io": "^1.5.1"
   },
   "engines": {
-  	"node": "0.10.x"
-  }
+    "node": "0.10.x"
+  }  
 }
