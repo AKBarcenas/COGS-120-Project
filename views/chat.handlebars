@@ -7,6 +7,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -86,7 +87,7 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
 						<ul id="messages">
-							<li> Hey! What type of food are you feeling right now? </li>
+							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? </li>
 						</ul>
 							
 						<div class="row">
@@ -111,7 +112,7 @@
 			return false;
     	});
     	socket.on('chat message', function(msg) {
-		$('#messages').append($('<li>').text(msg));
+		$('#messages').append($('<li class="animated fadeInUp">').text(msg));
    	 });
 
 	</script>

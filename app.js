@@ -60,7 +60,7 @@ io.on('connection',function(socket){
 	//console.log('message: ' + msg);
 	// working one io.emit('chat message',msg);
 	io.emit('chat message',msg);
-	console.log('kjlsahdf;lahsjdfl;kjas');
+	console.log('Socket.IO: Message Sent');
     });
 });
 
