@@ -13,6 +13,7 @@ var project = require('./routes/project');
 var preferences = require('./routes/preferences');
 var chat = require('./routes/chat');
 var profile = require('./routes/profile');
+var login = require('./routes/login');
 
 // Example route
 // var user = require('./routes/user');
@@ -48,6 +49,7 @@ app.get('/profile', profile.view);
 // app.get('/users', user.list);
 
 app.get('/chat', chat.view);
+app.get('/login', login.view);
 
 
 

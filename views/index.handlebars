@@ -10,12 +10,12 @@
 	<link href="/css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">   
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <script>
  	   //Toggles for click to expand
-  	  $(document).ready(function(){$("#favorites-toggle").click(function(){$("#favorites").toggle();});})
+  	  $(document).ready(function(){$("#login-toggle").click(function(){$("#login").toggle();});})
   	  $(document).ready(function(){$("#recommendations-toggle").click(function(){$("#recommendations").toggle();});})
-  	  $(document).ready(function(){$("#past-toggle").click(function(){$("#past").toggle();});})
-  	  $(document).ready(function(){$("#preferences-toggle").click(function(){$("#preferences").toggle();});})
     </script>
 </head>
 
@@ -43,8 +43,13 @@
 					<hr class="animated fadeInDown">			
 					<h3 class="animated fadeInDown">Find new places to eat that are in your area and fit all of your preferences or needs.</h3>
 			
+					<a href="/login/" id="login-toggle" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+  						Log In
+					</a> 
+				
+					<p style="margin-top: 18px;"> OR </p>
 					<a href="/preferences/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
-  						Get Started &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
+  						Create an Account &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="position: relative; top: 3px;"></span> 
 					</a>
 				</div>
 			</div>

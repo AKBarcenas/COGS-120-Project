@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Food.AI</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+ 	   //Toggles for click to expand
+  	  $(document).ready(function(){$("#login-toggle").click(function(){$("#login").toggle();});})
+  	  $(document).ready(function(){$("#recommendations-toggle").click(function(){$("#recommendations").toggle();});})
+    </script>
+</head>
+
+<body>
+
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="../" style="color:white">Food.AI</a>
+		<a href="#" onClick='alert("You need to login before you can access this page");' style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
+		<a href="#" onClick='alert("You need to login before you can access this page");' style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+      	<a href="#" onClick='alert("You need to login before you can access this page");' style="float: right; padding-right: 10px; padding-top: 15px;">Chat</a>
+    </div>
+   
+  </div>
+</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3" style="margin-top: 60px;">
+				<!-- Hardcoded login will work for right now -->
+				<div style="text-align: center;">
+					<h3 class="animated fadeInDown">Login</h3>
+					<form style="position: relative;" action="#">
+						<div class="form-group" style="margin-top: 10px;">
+							<label for="example-text-input">Username:</label> <br>
+							<input class="form-control" type="text" placeholder="Username" id="example-text-input" style="width: 200px; display: inline;">
+						</div>
+						<div class="form-group" style="margin-top: 10px;">
+							<label for="example-text-input">Password:</label> <br>
+							<input class="form-control" type="password" id="example-text-input" style="width: 200px; display: inline;">
+						</div>
+						<div class="form-group" style="margin-top: 10px;">
+							<!-- 
+							<input type="submit" style="width: 100px; display: inline; background-color: #FFFFFF; border: 1px solid #DDDDDD; border-radius: 3px;" value="Log in">
+							-->
+							<!-- Style is fixed when you use input element -->
+							<a href="/chat/" type="submit" style="width: 100px; display: inline; background-color: #FFFFFF; border: 1px solid #DDDDDD; border-radius: 3px;" value="Log in"> Log In </a>
+						</div>
+					</form>
+					
+					
+					
+					
+					
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
