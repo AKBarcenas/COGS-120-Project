@@ -3,3 +3,89 @@
 *, h1, h2, h3, h4, h5, h6, h7, a, div, p, button, input, ul, li, ol, dd, dt, table, td, tr, span, strong, em, for, label
 
 {font-family: 'Source Sans Pro', -apple-system, sans-serif;}
+
+* 	{margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+	}
+body 		{font: 13px; 
+	background-color: white;
+	}
+form 		{
+	padding: 3px; 
+	position: fixed; 
+	bottom: 10px; 
+	width: 100%;
+	}
+form input 	{border: 10px; 
+		padding: 10px;
+		background-color: rgb(240,240,240);
+		border-radius: 5px; 
+	}
+form button {width: 9%; 
+	background: rgb(15,133,237); 
+	border: none; 
+	padding: 10px; 
+	color: white;
+	}
+#messages 	{list-style-type: none; 
+	margin: 0;
+	padding-bottom: 20px; 
+	}
+#messages li {background: rgb(15,133,237); 
+	padding: 5px 10px;
+	max-width: 265px;
+	float: right;
+	clear: both;
+	color: white;
+	border-radius: 5px;
+	margin-top: 5px;		
+	}
+#messages li:nth-child(odd) {
+	padding: 5px 10px;
+	float: left;
+	clear: both;	
+	background: rgb(230,230,230);	
+	color: black;
+	max-width: 265px;
+	border-radius: 5px;	
+	margin-top: 5px;
+	}	
+.profile-photo
+	{width: 140px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	}
+#favorites, #recommendations, #past, #preferences			
+	{display: none;
+	}
+  #search {
+    width:90%;
+}
+
+.searchicon {
+    color:#5CB85C;
+}
+
+.items-collection{
+    margin:20px 0 0 0;
+}
+.items-collection label.btn-default.active{
+    background-color:#007ba7;
+    color:#FFF;
+}
+.items-collection label.btn-default{
+    width:90%;
+    border:1px solid #305891;
+    margin:5px; 
+    border-radius: 5px;
+    color: #305891;
+}
+.items-collection label .itemcontent{
+    width:100%;
+}
+.items-collection .btn-group{
+    width:90%
+}
+
