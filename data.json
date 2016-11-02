@@ -3,32 +3,32 @@
     {
       "name": "Tajima",
       "description": "Japanese, Ramen",
-      "location": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"      
+      "location": "4681 Convoy St, San Diego, CA 92111"      
     },
     {
       "name": "Rigobertos",
       "description": "Mexican, Fast, 24h",
-      "location": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"     
+      "location": "7094 Miramar Rd, San Diego, CA 92121"     
     },
     {
       "name": "Chopstix",
       "description": "Japanese",
-      "location": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"      
+      "location": "4633 Convoy St, San Diego, CA 92111"      
     },
     {
       "name": "McDonalds",
       "description": "American, Fast, 24h",
-      "location": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"     
+      "location": "Costa Verde Center, 4260 Nobel Dr, San Diego, CA 92122"     
     },
     {
       "name": "Chipotle",
       "description": "Mexican, Fast",
-      "location": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg/800px-Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg"
+      "location": "La Jolla Village Square, 8657 Villa La Jolla Dr, La Jolla, CA 92037"
     },
     {
       "name": "Grandma's Tofu House",
       "description": "Korean",
-      "location": "http://amturing.acm.org/images/lg_aw/3167755.jpg"
+      "location": "4425 Convoy St, San Diego, CA 92111"
     }
   ]
 }

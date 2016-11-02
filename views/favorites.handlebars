@@ -29,20 +29,16 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<img src="/images/profile/barack-obama.png" alt="profile" class="profile-photo">
-			<h2 style="text-align: center;">Barack Obama</h2>
+			<h2 style="text-align: center;">Your Favorites</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 		{{#each favorites}}
-		<p>{{name}}</p>
-		<div class="project" id="{{id}}">
-			<a href="project.html" class="thumbnail">
-				<img src="images/{{image}}" alt="Lorem Pixel image" class="img">
-				<p>{{name}}</p>
-			</a>
-		</div>	
+		<p>{{name}} --- {{description}}</p>
+		<p>{{location}}</p>
+		<p>DELETE</p>
+		<hr>
 		{{/each}}
 		</div>
 	</div> <!-- End row -->
