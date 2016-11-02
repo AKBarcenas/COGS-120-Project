@@ -1,23 +1,36 @@
-<!DOCTYPE html>
+
+<!doctype html>
+
 <html>
-  <head>
-    <title>Project</title>
+<head>
+    <title>Profile | Food.AI</title>    
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    
-<!-- Got no time to fix indenting -->
- <style type="text/css">
+    <style type="text/css">
+    .profile-photo      {width: 140px;
+                        display: block;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        }
+    #favorites, #recommendations, #past, #preferences           
+                        {display: none;
+                        }
+    </style>      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+       //Toggles for click to expand
+      $(document).ready(function(){$("#favorites-toggle").click(function(){$("#favorites").toggle();});})
+      $(document).ready(function(){$("#recommendations-toggle").click(function(){$("#recommendations").toggle();});})
+      $(document).ready(function(){$("#past-toggle").click(function(){$("#past").toggle();});})
+      $(document).ready(function(){$("#preferences-toggle").click(function(){$("#preferences").toggle();});})
+    </script>
+     <style type="text/css">
   #search {
     width:90%;
 }
@@ -47,12 +60,26 @@
     width:90%
 }
 </style>
-  </head>
-  
+
+</head>
   
  
  <!-- Body -->
   <body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="../chat/">Food.AI</a>
+        <a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px; color:white">Preferences</a>      
+        <a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+        <a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px;">Chat</a>
+    </div>
+   
+  </div>
+</nav>
 	<!-- this is a comment in HTML -->
 	<div class="container">
     <p class="fade" id="hello">Let's get you set up.</p>

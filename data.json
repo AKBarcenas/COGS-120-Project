@@ -1,0 +1,34 @@
+{
+  "favorites": [
+    {
+      "name": "Tajima",
+      "description": "Japanese, Ramen",
+      "location": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"      
+    },
+    {
+      "name": "Rigobertos",
+      "description": "Mexican, Fast, 24h",
+      "location": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"     
+    },
+    {
+      "name": "Chopstix",
+      "description": "Japanese",
+      "location": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"      
+    },
+    {
+      "name": "McDonalds",
+      "description": "American, Fast, 24h",
+      "location": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"     
+    },
+    {
+      "name": "Chipotle",
+      "description": "Mexican, Fast",
+      "location": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg/800px-Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg"
+    },
+    {
+      "name": "Grandma's Tofu House",
+      "description": "Korean",
+      "location": "http://amturing.acm.org/images/lg_aw/3167755.jpg"
+    }
+  ]
+}
