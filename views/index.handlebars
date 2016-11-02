@@ -17,6 +17,26 @@
   	  $(document).ready(function(){$("#login-toggle").click(function(){$("#login").toggle();});})
   	  $(document).ready(function(){$("#recommendations-toggle").click(function(){$("#recommendations").toggle();});})
     </script>
+    
+    <style type="text/css">
+    #submit			{width: 100px; 
+    				display: inline; 
+    				background-color: #FFFFFF; 
+    				border: 1px solid #CDCDCD; 
+    				border-radius: 3px; 
+    				padding: 5px 10px 5px 10px;
+   			 		}
+    
+    #submit:hover	{background-color: #F5AB35;
+    				color: white;
+    				border: 1px solid #F5AB35; 
+    				}
+    
+    
+    
+    </style>
+    
+    
 </head>
 
 <body>
@@ -27,9 +47,9 @@
     <div class="navbar-header">
 
       <a class="navbar-brand" href="../chat/" style="color:white">Food.AI</a>
-		<a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
-		<a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
-      	<a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px;">Chat</a>
+		<a href="#" onClick='alert("You need to login before you can access this page");' style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
+		<a href="#" onClick='alert("You need to login before you can access this page");' style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+      	<a href="#" onClick='alert("You need to login before you can access this page");' style="float: right; padding-right: 10px; padding-top: 15px;">Chat</a>
     </div>
    
   </div>
@@ -43,9 +63,28 @@
 					<hr class="animated fadeInDown">			
 					<h3 class="animated fadeInDown">Find new places to eat that are in your area and fit all of your preferences or needs.</h3>
 			
-					<a href="/login/" id="login-toggle" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
-  						Log In
+					<a href="#" id="login-toggle" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+  						I have an account
 					</a> 
+					<div id="login" style="display: none;">
+					<form style="position: relative;" action="#">
+						<div class="form-group" style="margin-top: 20px;">
+							<label for="example-text-input" style="font-size: 16px;">Username:</label> <br>
+							<input class="form-control" type="text" placeholder="Username" id="example-text-input" style="width: 200px; display: inline;">
+						</div>
+						<div class="form-group" style="margin-top: 10px;">
+							<label for="example-text-input" style="font-size: 16px;">Password:</label> <br>
+							<input class="form-control" type="password" id="example-text-input" style="width: 200px; display: inline;">
+						</div>
+						<div class="form-group" style="margin-top: 10px;">
+							<!-- 
+							<input type="submit" style="width: 100px; display: inline; background-color: #FFFFFF; border: 1px solid #DDDDDD; border-radius: 3px;" value="Log in">
+							-->
+							<!-- Style is fixed when you use input element -->
+							<a href="/chat/" type="submit" id="submit" value="Log in"> Log In </a>
+						</div>
+					</form>
+					</div>
 				
 					<p style="margin-top: 18px;"> OR </p>
 					<a href="/preferences/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
