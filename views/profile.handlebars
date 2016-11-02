@@ -9,9 +9,7 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
     <script>
  	   //Toggles for click to expand
   	  $(document).ready(function(){$("#favorites-toggle").click(function(){$("#favorites").toggle();});})
@@ -22,21 +20,17 @@
 </head>
 
 <body>
-
 	<!-- Nav Bar -->
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-
       <a class="navbar-brand" href="../chat/">Food.AI</a>
 		<a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
 		<a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px; color: white;">Profile</a>
       	<a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px;">Chat</a>
     </div>
-   
   </div>
 </nav>
-
 	<section class="animated fadeInUp">
 		<div class="container">
 			<div class="row">
@@ -47,12 +41,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<a href="#" onClick="return false;" id="favorites-toggle" class="nav-toggle"><h4> Favorites </h4></a>
-					<div id="favorites">
-						{{name}} <br>
-						{{name}} <br>
-						{{name}} <br>				
-					</div>
+					<a href="/favorites"><h4> Favorites </h4></a>
 					<hr>
 					<a href="#" onClick="return false;" id="recommendations-toggle" class="nav-toggle"><h4> Recommendations </h4></a>
 					<div id="recommendations"> 
@@ -60,16 +49,7 @@
 						Lemongrass <br>
 					</div>
 					<hr>
-					<a href="#" onClick="return false;" id="past-toggle" class="nav-toggle"><h4> Past Visits</h4></a>
-					<div id="past"> 
-						64 Degrees <br>				
-						Foodworx <br>				
-						Pines <br>				
-						Cafe Ventanas <br>				
-						Canyon Vista <br>	
-					</div>
-					<hr>
-					<a href="#" onClick="return false;" id="preferences-toggle" class="nav-toggle"><h4> Preferences </h4></a>
+					<a href="/preferences"><h4> Preferences </h4></a>
 					<div id="preferences">
 						<h4>Allergies</h4>
 						<div>Peanut</div>
