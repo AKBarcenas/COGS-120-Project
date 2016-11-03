@@ -152,6 +152,12 @@
               else  {
                 message = "Sorry :( I can't find anything for you just yet. Try entering another type of food!";
               }
+
+              if(intentHashtable.hasOwnProperty('acceptance') ) {
+                messageContent = intentHashtable["acceptance"][0]["value"];
+                console.log(messageContent);
+              }
+
               $('#messages').append($('<li class="animated fadeInUp">').text(message));
           }
         });
