@@ -66,6 +66,10 @@
             //$('#messages').append($('<li class="animated fadeInUp">').text(data));
             //console.log(data);                                                                     
         });*/
+        $('#messages').append($('<li class="animated fadeInUp">').text(msg));
+
+
+        // Get entities from the string using wit.ai and prints a hardcoded response.
         $.ajax({
           url: 'https://api.wit.ai/message',
           data: {
@@ -79,15 +83,19 @@
               intentHashtable = response.entities;
               if(intentHashtable.hasOwnProperty('food') ) {
                 messageContent = intentHashtable["food"][0]["value"];
-                if( messageContent == "tacos"){
+                console.log(messageContent);
+                if(messageContent == "tacos"){
                   message = "You should go to Tacos El Gordo";
                 }
+              }
+
+              else  {
+                message = "I can't find anything for you.";
               }
               $('#messages').append($('<li class="animated fadeInUp">').text(message));
           }
         });
    	 });
-// will be useful
 
 
 
