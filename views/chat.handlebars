@@ -85,12 +85,12 @@
               if(intentHashtable.hasOwnProperty('food') ) {
                 messageContent = intentHashtable["food"][0]["value"];
                 console.log(messageContent);
-                if(messageContent == "tacos" || messageContent == "taco")  {
+                if(messageContent == "tacos" || messageContent == "taco" || messageContent == "Mexican")  {
                   placeName = "Rigobertos Taco Shop";
                   placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
                 }
 
-                else if(messageContent == "ramen")  {
+                else if(messageContent == "ramen" || messageContent == "Japanese")  {
                   placeName = "Tajima Ramen House";
                   placeAddress = "4681 Convoy St, San Diego, CA 92111";
                 }
@@ -100,7 +100,7 @@
                   placeAddress = "8990 University Center Ln, San Diego, CA 92122";
                 }
 
-                else if(messageContent == "steak")  {
+                else if(messageContent == "steak" || messageContent == "American")  {
                   placeName = "Fleming's Prime Steakhouse & Wine Bar";
                   placeAddress = "8970 University Center Ln, San Diego, CA 92122";
                 }
@@ -118,12 +118,12 @@
                 }
                 
                 else  {
-                  message = "I can't find a place for the type of food you asked for. Is there anything else you would like?";
+                  message = "I can't find a place for the type of food you asked for. Is there anything else you would like? Try 'tacos' or 'ramen'";
                 }
               }
 
               else  {
-                message = "I can't find anything for you.";
+                message = "Sorry :( I can't find anything for you just yet. Try entering another type of food!";
               }
               $('#messages').append($('<li class="animated fadeInUp">').text(message));
           }
