@@ -142,7 +142,8 @@
                 }
 
                 if(placeName != "NULL")  {
-                  message = "You should go to a place called " + placeName + " located at " + placeAddress + ".";
+                  message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like me to add this to your favorites or would " +
+                    "you like some other food?";
                 }
                 
                 else  {
@@ -158,7 +159,7 @@
               if(intentHashtable.hasOwnProperty('acceptance') && foodFound == false) {
                 messageContent = intentHashtable["acceptance"][0]["value"];
                 console.log(messageContent);
-                message = "I add that to your favorites now.";
+                message = "I will add this to your favorites now.";
               }
 
               $('#messages').append($('<li class="animated fadeInUp">').text(message));
