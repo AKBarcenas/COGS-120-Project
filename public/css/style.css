@@ -28,6 +28,15 @@ form button {width: 9%;
 	padding: 10px; 
 	color: white;
 	}
+	
+	a{
+		color:#000;
+		text-decoration:none;
+	}
+	a:hover {
+		color:gray;
+		text-decoration:none;
+	}
 #messages 	{list-style-type: none; 
 	margin: 0;
 	padding-bottom: 20px; 
@@ -88,4 +97,17 @@ form button {width: 9%;
 .items-collection .btn-group{
     width:90%
 }
+#submit			{width: 100px; 
+	display: inline; 
+	background-color: #FFFFFF; 
+	border: 1px solid #CDCDCD;
+	border-radius: 3px; 
+	padding: 5px 10px 5px 10px;
+ 		}
+
+#submit:hover	{background-color: #F5AB35;
+	color: white;
+	border: 1px solid #F5AB35; 
+	}
+
 
