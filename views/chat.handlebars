@@ -51,6 +51,7 @@
 
 <!-- Socket.IO display message -->
 <script>
+    var print;
     var socket = io();
     		$('form').submit(function() {
 			socket.emit('chat message', $('#m').val());
@@ -58,22 +59,37 @@
 			return false;
     	});
     	socket.on('chat message', function(msg) {
-		$('#messages').append($('<li class="animated fadeInUp">').text(msg));
+        /*$.get('https://api.wit.ai/message', {'q': msg, 'access_token': 'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'},function(data,status){
+            $.get('https://api.wit.ai/message/'+data.msg_id,{headers:{'Authorization':'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'}},function(data1,status){
+                console.log(data1);                                                    
+            })
+            //$('#messages').append($('<li class="animated fadeInUp">').text(data));
+            //console.log(data);                                                                     
+        });*/
+        $.ajax({
+          url: 'https://api.wit.ai/message',
+          data: {
+            'q': msg,
+            'access_token' : 'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'
+          },
+          dataType: 'jsonp',
+          method: 'GET',
+          success: function(response) {
+              console.log("success!", response);
+              intentHashtable = response.entities;
+              if(intentHashtable.hasOwnProperty('food') ) {
+                messageContent = intentHashtable["food"][0]["value"];
+                if( messageContent == "tacos"){
+                  message = "You should go to Tacos El Gordo";
+                }
+              }
+              $('#messages').append($('<li class="animated fadeInUp">').text(message));
+          }
+        });
    	 });
-/* will be useful
-$.ajax({
-  url: 'https://api.wit.ai/message',
-  data: {
-    'q': 'set an alarm in 10min',
-    'access_token' : 'MY_WIT_TOKEN'
-  },
-  dataType: 'jsonp',
-  method: 'GET',
-  success: function(response) {
-      console.log("success!", response);
-  }
-});
-*/
+// will be useful
+
+
 
 </script>
 
