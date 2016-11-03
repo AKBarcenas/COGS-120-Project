@@ -41,7 +41,7 @@
 	<div class="container">
     <p class="fade" id="hello">Let's get you set up.</p>
     <center class="animated fadeInUp">
-    
+    <h1>GENERAL</h1>
 	<h2>How far are you willing to travel?</h2>
 	<label for="fader">Distance (mi): </label> 
 	<output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
@@ -54,13 +54,46 @@
 	<br>
 	<input type="range" min="1" max="100" value="10" id="fader" step="1" oninput="outputDollars(value)" style="width:240px;">
 
+    <h2>Do you have any pets?</h2>
+    <center>
+      <div class="container">
+    <div class="row">
+        <div class="form-group">
+            <div class="items-collection">
+                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                            <label class="btn btn-default">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="nuts" autocomplete="off" value="nuts">
+                                    <span class="fa fa-car fa-2x"></span>
+                                    <h5>Cat</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div></div></div>
+        <div class="form-group">
+            <div class="items-collection">
+                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                            <label class="btn btn-default">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="nuts" autocomplete="off" value="nuts">
+                                    <span class="fa fa-car fa-2x"></span>
+                                    <h5>Dog</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div></div></div></div></div>
 <h2>Got any allergies?</h2>
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
   <div class="container">
     <div class="row">
         <div class="form-group">
             <div class="items-collection">
-
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
@@ -149,10 +182,11 @@
   
 <!--http://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_forms_slider-->
 
-	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
-  				Start Chatting &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
+    <a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> SKIP FOR NOW &nbsp;
+    </a>
+	<a href="/preferences2/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+  				NEXT &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
 	</a>
-    
   </div>
   <!--main end-->
 
