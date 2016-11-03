@@ -44,7 +44,10 @@
 		</div>
 
 <script src="/socket.io/socket.io.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Socket.IO display message -->
+<script>
     var socket = io();
     		$('form').submit(function() {
 			socket.emit('chat message', $('#m').val());
@@ -54,8 +57,22 @@
     	socket.on('chat message', function(msg) {
 		$('#messages').append($('<li class="animated fadeInUp">').text(msg));
    	 });
+/* will be useful
+$.ajax({
+  url: 'https://api.wit.ai/message',
+  data: {
+    'q': 'set an alarm in 10min',
+    'access_token' : 'MY_WIT_TOKEN'
+  },
+  dataType: 'jsonp',
+  method: 'GET',
+  success: function(response) {
+      console.log("success!", response);
+  }
+});
+*/
 
-	</script>
+</script>
 
   </body>
 </html>

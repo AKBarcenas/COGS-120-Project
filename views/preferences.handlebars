@@ -43,15 +43,15 @@
     
 	<h2>How far are you willing to travel?</h2>
 	<label for="fader">Distance (mi): </label> 
-	<output for="fader" id="volume" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+	<output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
 	<br>
-	<input type="range" min="1" max="50" value="10" id="fader" step="1" oninput="outputUpdate(value)">
+	<input type="range" min="1" max="50" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
 	
 	<h2>Maximum price per person?</h2>
 	<label for="fader">Price ($): </label> 
-	<output for="fader" id="volume" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+	<output for="fader" id="dollars" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
 	<br>
-	<input type="range" min="1" max="100" value="10" id="fader" step="1" oninput="outputUpdate(value)">
+	<input type="range" min="1" max="100" value="10" id="fader" step="1" oninput="outputDollars(value)" style="width:240px;">
 
 <h2>Got any allergies?</h2>
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
@@ -167,9 +167,19 @@ $(function () {
     });
 });
 
-function outputUpdate(vol) {
-	document.querySelector('#volume').value = vol;
+function outputMiles(vol) {
+	document.querySelector('#miles').value = vol;
 }
+
+
+
+function outputDollars(vol) {
+	document.querySelector('#dollars').value = vol;
+}
+
+
+
+
 </script>
   </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
