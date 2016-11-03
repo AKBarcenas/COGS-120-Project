@@ -85,6 +85,8 @@
               if(intentHashtable.hasOwnProperty('food') ) {
                 messageContent = intentHashtable["food"][0]["value"];
                 console.log(messageContent);
+
+                // Cancer code below.
                 if(messageContent == "tacos" || messageContent == "taco")  {
                   placeName = "Rigobertos Taco Shop";
                   placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
@@ -106,7 +108,28 @@
                 }
 
                 else if(messageContent == "italian")  {
+                  placeName = "Bella Vista Social Club & Caffe";
+                  placeAddress = "2880 Torrey Pines Scenic Dr, La Jolla, CA 92037";
+                }
 
+                else if(messageContent == "thai")  {
+                  placeName = "Star Anise Thai Cuisine";
+                  placeAddress = "8935 Towne Centre Dr, San Diego, CA 92122";
+                }
+
+                else if(messageContent == "mediterranean")  {
+                  placeName = "Almaz Restaurant";
+                  placeAddress = "10920 Roselle St, San Diego, CA 92121"
+                }
+
+                else if(messageContent == "korean")  {
+                  placeName = "Taegukgi Korean BBQ";
+                  placeAddress = "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111";
+                }
+
+                else if(messageContent == "spanish")  {
+                  placeName = "Costa Brava";
+                  placeAddress = "1653 Garnet Ave, San Diego, CA 92109";
                 }
 
                 else  {
