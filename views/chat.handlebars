@@ -80,6 +80,7 @@
           method: 'GET',
           success: function(response) {
               console.log("success!", response);
+              var foodFound = true;
               intentHashtable = response.entities;
               if(intentHashtable.hasOwnProperty('food') ) {
                 messageContent = intentHashtable["food"][0]["value"];
@@ -150,10 +151,11 @@
               }
 
               else  {
+                foodFound = false;
                 message = "Sorry :( I can't find anything for you just yet. Try entering another type of food!";
               }
 
-              if(intentHashtable.hasOwnProperty('acceptance') ) {
+              if(intentHashtable.hasOwnProperty('acceptance') && foodFound == false) {
                 messageContent = intentHashtable["acceptance"][0]["value"];
                 console.log(messageContent);
               }
