@@ -42,25 +42,30 @@
     <h2>Help us get to know your taste buds! <br>How much do you enjoy...</h2>
     <p>(On a scale of 1-10. Feel free to skip any!)</p>
     <H2>Japanese food?</H2>
-    <output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <output for="fader" id="japanese" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
     <br>
-    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
+    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputJapanese(value)" style="width: 240px;">
+    
     <H2>Korean food?</H2>
-    <output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <output for="fader" id="korean" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
     <br>
-    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
+    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputKorean(value)" style="width: 240px;">
+    
     <H2>Mexican food?</H2>
-    <output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <output for="fader" id="mexican" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
     <br>
-    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
+    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputMexican(value)" style="width: 240px;">
+    
     <H2>American food?</H2>
-    <output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <output for="fader" id="american" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
     <br>
-    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
+    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputAmerican(value)" style="width: 240px;">
+    
     <H2>Chinese food?</H2>
-    <output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <output for="fader" id="chinese" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
     <br>
-    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
+    <input type="range" min="1" max="10" value="10" id="fader" step="1" oninput="outputChinese(value)" style="width: 240px;">
+    
     <!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
   <div class="container">
     <div class="row">
@@ -87,12 +92,25 @@ $(function () {
     });
 });
 
-function outputMiles(vol) {
-    document.querySelector('#miles').value = vol;
+
+function outputJapanese(vol) {
+    document.querySelector('#japanese').value = vol;
 }
 
-function outputDollars(vol) {
-    document.querySelector('#dollars').value = vol;
+function outputKorean(vol) {
+    document.querySelector('#korean').value = vol;
+}
+
+function outputMexican(vol) {
+    document.querySelector('#mexican').value = vol;
+}
+
+function outputAmerican(vol) {
+    document.querySelector('#american').value = vol;
+}
+
+function outputChinese(vol) {
+    document.querySelector('#chinese').value = vol;
 }
 
 </script>
