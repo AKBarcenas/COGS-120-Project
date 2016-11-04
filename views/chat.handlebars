@@ -30,7 +30,7 @@
 				<div class="row" style="padding-bottom: 50px;">
 					<div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
 						<ul id="messages">
-							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? Type "whatever" for a personalized random recommendation!</li>
+							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? Type "food" for a personalized random recommendation!</li>
 						</ul>
 							
 						<div class="row">
@@ -132,9 +132,8 @@
                   placeAddress = "1653 Garnet Ave, San Diego, CA 92109";
                 }
 
-                else if(messageContent == "whatever")  {
-                  placeName = "Costa Brava";  <!-- HOW TO GET RANDOM --> 
-                  placeAddress = "1653 Garnet Ave, San Diego, CA 92109";
+                else if(messageContent == "food")  {
+                  message = "You should go to a place called Almaz Restaurant located at 10920 Roselle St, San Diego, CA 92121.";
                 }
 
                 else  {
@@ -142,8 +141,7 @@
                 }
 
                 if(placeName != "NULL")  {
-                  message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like me to add this to your favorites or would " +
-                    "you like some other food?";
+                  message = "You should go to a place called " + placeName + " located at " + placeAddress + ".";
                 }
                 
                 else  {
