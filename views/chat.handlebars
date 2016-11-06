@@ -30,7 +30,7 @@
 				<div class="row" style="padding-bottom: 50px;">
 					<div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
 						<ul id="messages">
-							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? </li>
+							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? Type "food" for a personalized random recommendation!</li>
 						</ul>
 							
 						<div class="row">
@@ -45,7 +45,6 @@
 				</div>
 			</div>
 		</div>
-
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!--<script src="/scripts/require.js"></script>-->
@@ -91,6 +90,7 @@
           method: 'GET',
           success: function(response) {
               console.log("success!", response);
+              var foodFound = true;
               intentHashtable = response.entities;
               if(intentHashtable.hasOwnProperty('food') ) {
                 messageContent = intentHashtable["food"][0]["value"];
@@ -102,7 +102,7 @@
                   placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
                 }
 
-                else if(messageContent == "ramen")  {
+                else if(messageContent == "ramen" || messageContent == "japanese")  {
                   placeName = "Tajima Ramen House";
                   placeAddress = "4681 Convoy St, San Diego, CA 92111";
                 }
@@ -112,7 +112,7 @@
                   placeAddress = "8990 University Center Ln, San Diego, CA 92122";
                 }
 
-                else if(messageContent == "steak")  {
+                else if(messageContent == "steak" || messageContent == "american")  {
                   placeName = "Fleming's Prime Steakhouse & Wine Bar";
                   placeAddress = "8970 University Center Ln, San Diego, CA 92122";
                 }
@@ -140,6 +140,10 @@
                 else if(messageContent == "spanish")  {
                   placeName = "Costa Brava";
                   placeAddress = "1653 Garnet Ave, San Diego, CA 92109";
+                }
+
+                else if(messageContent == "food")  {
+                  message = "You should go to a place called Almaz Restaurant located at 10920 Roselle St, San Diego, CA 92121.";
                 }
 
                 else  {
