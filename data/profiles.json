@@ -1,47 +1,46 @@
 {
-  "profiles": [
+	"profiles": [
     {
-	"name": "Barack Obama",
-	"email": "barack@obama.gov",
-	"travel_distance": "15",
-	"max_price": "10",
-	"nut_allergy": "no",
-	"soy_allergy": "no",
-	"gluten_allergy": "no",
-	"fish_allergy": "no",
-	"milk_allergy": "no",
-	"other": "no",
-	"favorites": [
-    		{
-      		"id":"1001"
-    		} 
-    ]
+		"name": "Barack Obama",
+		"email": "barack@obama.gov",
+		"travel_distance": "15",
+		"max_price": "10",
+		"nut_allergy": "no",
+		"soy_allergy": "no",
+		"gluten_allergy": "no",
+		"fish_allergy": "no",
+		"milk_allergy": "no",
+		"other": "no",
+		"favorites": [
+			1001,
+   	   		2000
+    	]
 	},
 
     {
-	"name": "Jason Bourne",
-	"email": "jasonbourne@gmail.com",
-	"travel_distance": "50",
-	"max_price": "40",
-	"nut_allergy": "no",
-	"soy_allergy": "no",
-	"gluten_allergy": "no",
-	"fish_allergy": "no",
-	"milk_allergy": "yes",
-	"other": "no"	      
+		"name": "Jason Bourne",
+		"email": "jasonbourne@gmail.com",
+		"travel_distance": "50",
+		"max_price": "40",
+		"nut_allergy": "no",
+		"soy_allergy": "no",
+		"gluten_allergy": "no",
+		"fish_allergy": "no",
+		"milk_allergy": "yes",
+		"other": "no"	      
     },
 
     {
-	"name": "Alex Barcenas",
-	"email": "akbarcen@ucsd.edu",
-	"travel_distance": "15",
-	"max_price": "4.20",
-	"nut_allergy": "yes",
-	"soy_allergy": "yes",
-	"gluten_allergy": "yes",
-	"fish_allergy": "yes",
-	"milk_allergy": "yes",
-	"other": "no"	      
+		"name": "Alex Barcenas",
+		"email": "akbarcen@ucsd.edu",
+		"travel_distance": "15",
+		"max_price": "4.20",
+		"nut_allergy": "yes",
+		"soy_allergy": "yes",
+		"gluten_allergy": "yes",
+		"fish_allergy": "yes",
+		"milk_allergy": "yes",
+		"other": "no"	      
     }
   ]
 }
