@@ -57,7 +57,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
   var io = require('socket.io').listen(server);
 
-io.on('connection',function(socket){
+	io.on('connection',function(socket){
     socket.on('chat message', function(msg) {
 	//console.log('message: ' + msg);
 	// working one io.emit('chat message',msg);

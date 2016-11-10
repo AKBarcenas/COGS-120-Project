@@ -1,34 +1,70 @@
 {
-  "favorites": [
-    {
-      "name": "Tajima",
-      "description": "Japanese, Ramen",
-      "location": "4681 Convoy St, San Diego, CA 92111"      
-    },
-    {
-      "name": "Rigobertos",
-      "description": "Mexican, Fast, 24h",
-      "location": "7094 Miramar Rd, San Diego, CA 92121"     
-    },
-    {
-      "name": "Chopstix",
-      "description": "Japanese",
-      "location": "4633 Convoy St, San Diego, CA 92111"      
-    },
-    {
-      "name": "McDonalds",
-      "description": "American, Fast, 24h",
-      "location": "Costa Verde Center, 4260 Nobel Dr, San Diego, CA 92122"     
-    },
-    {
-      "name": "Chipotle",
-      "description": "Mexican, Fast",
-      "location": "La Jolla Village Square, 8657 Villa La Jolla Dr, La Jolla, CA 92037"
-    },
-    {
-      "name": "Grandma's Tofu House",
-      "description": "Korean",
-      "location": "4425 Convoy St, San Diego, CA 92111"
-    }
-  ]
+	"japanese": [
+		{
+			"id": "1000",
+			"name": "Tajima",
+			"description": "Japanese, Ramen",
+			"location": "4681 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"id": "1001",
+			"name": "Sushi Ota",
+			"description": "Japanese, Sushi",
+			"location": "4529 Mission bay Dr, San Diego, CA 92109"     
+		} 
+	],
+	"chinese": [
+		{
+			"id": "1100",
+			"name": "Panda Express",
+			"description": "Chinese, Fast",
+			"location": "9500 Gilman Dr, La Jolla, CA 92093"      
+		},
+		{
+			"id": "1101",
+			"name": "Mandarin House",
+			"description": "Chinese",
+			"location": "6765 La Jolla Blvd, La Jolla, CA 92037"     
+		} 
+	],
+	"seafood": [
+		{
+			"id": "2000",
+			"name": "El Pescador Fish Market and Restaurant",
+			"description": "Seafood, Crab",
+			"location": "634 Pearl St, La Jolla, CA 92037"      
+		},
+		{
+			"id": "2001",
+			"name": "Shore Rider",
+			"description": "Seafood",
+			"location": "2168 Avenida De La Playa"     
+		} 
+	],
+	"tacos": [
+		{
+			"id":"3000",
+			"name": "Rigoberto's Taco Shop",
+			"description": "Mexican, Tacos",
+			"location": "7094 Miramar Rd, San Diego, CA 92121"      
+		},
+		{
+			"id":"3001",
+			"name": "Tacos El Gordo",
+			"description": "Mexican, Tacos",
+			"location": "689 H Street, Chula Vista, CA 91910"     
+		} 
+	]
+
+
+
+
+
+
+
+
+
+
+
+
 }

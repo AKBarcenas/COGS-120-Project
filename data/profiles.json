@@ -1,5 +1,5 @@
 {
-  "favorites": [
+  "profiles": [
     {
 	"name": "Barack Obama",
 	"email": "barack@obama.gov",
@@ -10,8 +10,13 @@
 	"gluten_allergy": "no",
 	"fish_allergy": "no",
 	"milk_allergy": "no",
-	"other": "no"	      
-    },
+	"other": "no",
+	"favorites": [
+    		{
+      		"id":"1001"
+    		} 
+    ]
+	},
 
     {
 	"name": "Jason Bourne",
