@@ -1,0 +1,73 @@
+{
+	"japanese": [
+		{
+			"id": "1000",
+			"placeName": "Tajima",
+			"description": "Ramen",
+			"24hr":"no",
+			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"id": "1001",
+			"placeName": "Sushi Ota",
+			"description": "Sushi",
+			"24hr":"no",
+			"placeAddress": "4529 Mission bay Dr, San Diego, CA 92109"     
+		} 
+	],
+	"chinese": [
+		{
+			"id": "1100",
+			"placeName": "Panda Express",
+			"description": "Fast",
+			"24hr":"no",
+			"placeAddress": "9500 Gilman Dr, La Jolla, CA 92093"      
+		},
+		{
+			"id": "1101",
+			"placeName": "Mandarin House",
+			"description": "Restaurant",
+			"24hr":"no",
+			"placeAddress": "6765 La Jolla Blvd, La Jolla, CA 92037"     
+		} 
+	],
+	"seafood": [
+		{
+			"id": "2000",
+			"placeName": "El Pescador Fish Market and Restaurant",
+			"description": "Fish",
+			"24hr":"no",
+			"placeAddress": "634 Pearl St, La Jolla, CA 92037"      
+		},
+		{
+			"id": "2001",
+			"placeName": "Shore Rider",
+			"description": "Fish",
+			"24hr":"no",
+			"placeAddress": "2168 Avenida De La Playa"     
+		} 
+	],
+	"mexican": [
+		{
+			"id":"3000",
+			"placeName": "Rigoberto's Taco Shop",
+			"description": "Tacos",
+			"24hr":"no",
+			"placeAddress": "7094 Miramar Rd, San Diego, CA 92121"      
+		},
+		{
+			"id":"3001",
+			"placeName": "Tacos El Gordo",
+			"description": "Tacos",
+			"24hr":"no",
+			"placeAddress": "689 H Street, Chula Vista, CA 91910"     
+		},
+		{
+			"id":"3002",
+			"placeName": "Vallartas",
+			"description": "Tacos, Burritos",
+			"24hr":"yes",
+			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
+		} 
+	]
+}

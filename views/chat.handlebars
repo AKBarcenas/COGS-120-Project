@@ -48,18 +48,17 @@
 		</div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!--<script src="/scripts/require.js"></script>-->
 
 <!-- Socket.IO display message -->
 <script>
-    //var fs = require('fs');
     var print;
     var socket = io();
     var counter = 0;
     var foodSearched = false;
     var directionsAsked = false;
-    //var data = require('../data/restaurants.json');
-    //console.log(data);
+    var placeName = "";
+    var placeAddress = "";
+
     		$('form').submit(function() {
 			socket.emit('chat message', $('#m').val());
 			$('#m').val('');
@@ -77,10 +76,10 @@
         console.log(counter);
         $('#messages').append($('<li class="animated fadeInUp">').text(msg));
 
-        var restaurant = {
+        /*var restaurant = {
           placeName = "";
           placeAddress = "";
-        }
+        }*/
         
         var currentPlace;
         // Get entities from the string using wit.ai and prints a hardcoded response.
@@ -176,16 +175,6 @@
                   message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place or do you want another type of food?";
                   foodSearched = true;
                   directionsAsked = false;
-                    /*fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
-                      if (err) return console.log(err);
-                        console.log('Hello World > helloworld.txt');
-                    });*/
-                    //$('#messages').append($('<li class="animated fadeInUp">').text(message));
-
-                    /*socket.on('chat message', function(msg) {
-                      $('#messages').append($('<li class="animated fadeInUp">').text(msg));
-                      console.log("shit");
-                    });*/
                 }
 
                 else  {
@@ -196,12 +185,12 @@
 
               else if(foodSearched == true && directionsAsked == false)  {
                 if(intentHashtable.hasOwnProperty('acceptance'))  {
-                  message = "Here are the directions that you asked for: https://www.google.com/maps/@32.8717299,-117.2264455,15z Would you like to add this place to your favorites or is there another type of food you want?";
+                  message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites or is there another type of food you want?";
                   
                 }
 
                 else  {
-                  message = "Would you like to add this place to your favorites or is there another type of food you want?"
+                  message = "Would you like to add this place to your favorites or is there another type of food you want?";
                 }
 
                 directionsAsked = true;
@@ -210,15 +199,20 @@
               else if(foodSearched == true && intentHashtable.hasOwnProperty('acceptance') ) {
                 foodSearched = false;
                 message = "I will add this to your favorites now. Is there another type of food you want?";
-                /*$.ajax({
-                  url: '/data/restaurants.json',
-                  data: '',
-                  dataType: 'jsonp',
-                  method: 'GET',
+
+                $.ajax({
+                  url: '/add',
+                  data: {
+                    'name': placeName,
+                    'address' : placeAddress,
+                    'food' : messageContent 
+                  },
+                  //dataType: 'jsonp',
+                  //method: 'GET',
                   success: function(response1) {
                     console.log(response1);
                   }
-                })*/
+                })
               }
 
               else  {
