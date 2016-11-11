@@ -17,6 +17,7 @@ var login = require('./routes/login');
 var favorites = require('./routes/favorites');
 var preferences2 = require('./routes/preferences2');
 var newchat = require('./routes/newchat');
+var about = require('./routes/about');
 // Example route
 // var user = require('./routes/user');
 
@@ -32,7 +33,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
+app.use(express.cookieParser('Intro HCI secret key')); //lol what does this do
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
@@ -51,6 +52,7 @@ app.get('/login', login.view);
 app.get('/favorites', favorites.view);
 app.get('/preferences2', preferences2.view);
 app.get('/newchat', newchat.view);
+app.get('/about', about.view);
 
 
 var server = http.createServer(app).listen(app.get('port'), function(){

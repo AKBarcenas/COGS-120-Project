@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>About | Food.AI</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <script>
+ 	   //Toggles for click to expand
+  	  $(document).ready(function(){$("#favorites-toggle").click(function(){$("#favorites").toggle();});})
+  	  $(document).ready(function(){$("#recommendations-toggle").click(function(){$("#recommendations").toggle();});})
+  	  $(document).ready(function(){$("#past-toggle").click(function(){$("#past").toggle();});})
+  	  $(document).ready(function(){$("#preferences-toggle").click(function(){$("#preferences").toggle();});})
+    </script>
+</head>
+
+<body>
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../chat/">
+        <img src="/images/icon.png" class="img" width="30"></img>Food.AI</a>
+        <a href="../about/" style="float: right; padding-right: 10px; padding-top: 15px; color: white;">About</a> 
+		<a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
+		<a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+      	<a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px;">Chat</a>
+    </div>
+  </div>
+</nav>
+	<section class="animated fadeInUp">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h2 style="text-align: center;">About</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<img src="/images/icon.png" alt="Lorem Pixel image" class="img" width="100" style="display: block; margin: 0 auto; margin-bottom: 20px;">
+					<div style="text-align: center;">Food.AI is a revolutionary new app to help you find restaurants tailored to you. </div>
+					<br>
+					<blockquote>How do I use this?</blockquote>
+					<div>Once you set your preferences, you simply start chatting with Jimmy, your personal bot.
+						<br>
+						Just type what you want and Jimmy will find a restaurant for you.
+					</div>
+					<div style="height: 35px;"> &nbsp; </div>
+					<blockquote>Can I get directions?</blockquote>
+					<div>We're working on adding automatic directions. Currently, you may copy the address into a mapping app of your choice. 
+					</div>
+				</div>
+			</div> <!-- End row -->
+		</div> <!-- End Container -->
+	</section> 
+</body>
+
+</html>
