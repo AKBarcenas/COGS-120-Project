@@ -163,7 +163,28 @@
                 }
 
                 else if(messageContent == "food")  {
-                  message = "You should go to a place called Almaz Restaurant located at 10920 Roselle St, San Diego, CA 92121.";
+                  var random = Math.random();
+
+                  if(random <= .25)  {
+                    placeName = "Taegukgi Korean BBQ";
+                    placeAddress = "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111";
+                  }
+
+                  else if(random <= .50)  {
+                    placeName = "Tajima Ramen House";
+                    placeAddress = "4681 Convoy St, San Diego, CA 92111";
+                  }
+
+                  else if(random <= .75)  {
+                    placeName = "Fleming's Prime Steakhouse & Wine Bar";
+                    placeAddress = "8970 University Center Ln, San Diego, CA 92122";
+                  }
+
+                  else  {
+                    placeName = "Star Anise Thai Cuisine";
+                    placeAddress = "8935 Towne Centre Dr, San Diego, CA 92122";
+                  }
+                  /*message = "You should go to a place called Almaz Restaurant located at 10920 Roselle St, San Diego, CA 92121.";*/
                 }
 
                 else  {
