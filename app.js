@@ -18,6 +18,10 @@ var favorites = require('./routes/favorites');
 var preferences2 = require('./routes/preferences2');
 
 var add = require('./routes/add');
+
+var newchat = require('./routes/newchat');
+var about = require('./routes/about');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -33,7 +37,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
+app.use(express.cookieParser('Intro HCI secret key')); //lol what does this do
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
@@ -54,12 +58,15 @@ app.get('/preferences2', preferences2.view);
 app.get('/add', add.addFavorite);
 
 
+app.get('/newchat', newchat.view);
+app.get('/about', about.view);
+
 
 var server = http.createServer(app).listen(app.get('port'), function(){
 
   var io = require('socket.io').listen(server);
 
-io.on('connection',function(socket){
+	io.on('connection',function(socket){
     socket.on('chat message', function(msg) {
 	//console.log('message: ' + msg);
 	// working one io.emit('chat message',msg);

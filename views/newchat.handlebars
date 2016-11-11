@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat | Food.AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../chat/">
+        <img src="/images/icon.png" class="img" width="30"></img>Food.AI</a>
+		<a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
+		<a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+      	<a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px; color: white;">Chat</a>
+    </div>
+   
+  </div>
+</nav>
+		<div class="section">
+			<div class="container">
+				<div class="row" style="padding-bottom: 50px;">
+					<div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
+						<ul id="messages">
+							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? Type "food" for a personalized random recommendation!</li>
+						</ul>
+							
+						<div class="row">
+							<div class="col-md-12">
+								<form action=""">
+									<input id="m" autocomplete="off" style="width: 68%; max-width: 340px;"/>
+									<button style="width: 23%; border-radius: 5px; max-width: 120px;">Send</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="/scripts/require.js"></script>-->
+
+<!-- Socket.IO display message -->
+<script>
+    //var fs = require('fs');
+    var print;
+    var socket = io();
+    var counter = 0;
+    var foodSearched = false;
+    var directionsAsked = false;
+    //var data = require('../data/restaurants.json');
+    //console.log(data);
+    		$('form').submit(function() {
+			socket.emit('chat message', $('#m').val());
+			$('#m').val('');
+			return false;
+    	});
+    	socket.on('chat message', function(msg) {
+        /*$.get('https://api.wit.ai/message', {'q': msg, 'access_token': 'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'},function(data,status){
+            $.get('https://api.wit.ai/message/'+data.msg_id,{headers:{'Authorization':'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'}},function(data1,status){
+                console.log(data1);                                                    
+            })
+            //$('#messages').append($('<li class="animated fadeInUp">').text(data));
+            //console.log(data);                                                                     
+        });*/
+        counter += 1;
+        console.log(counter);
+        $('#messages').append($('<li class="animated fadeInUp">').text(msg));
+
+        var placeName = "";
+        var placeAddress = "";
+        var currentPlace;
+        // Get entities from the string using wit.ai and prints a hardcoded response.
+        $.ajax({
+          url: 'https://api.wit.ai/message',
+          data: {
+            'q': msg,
+            'access_token' : 'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'
+          },
+          dataType: 'jsonp',
+          method: 'GET',
+          success: function(response) {
+              console.log("success!", response);
+              var foodFound = true;
+              intentHashtable = response.entities;
+              if(intentHashtable.hasOwnProperty('food') ) {
+                messageContent = intentHashtable["food"][0]["value"];
+                console.log(messageContent);
+
+                // Cancer code below.
+                if(messageContent == "tacos" || messageContent == "taco")  {
+                  placeName = "Rigobertos Taco Shop";
+                  placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
+                }
+
+                else if(messageContent == "ramen" || messageContent == "japanese")  {
+                  placeName = "Tajima Ramen House";
+                  placeAddress = "4681 Convoy St, San Diego, CA 92111";
+                }
+
+                else if(messageContent == "seafood")  {
+                  placeName = "Truluck's";
+                  placeAddress = "8990 University Center Ln, San Diego, CA 92122";
+                }
+
+                else if(messageContent == "steak" || messageContent == "american")  {
+                  placeName = "Fleming's Prime Steakhouse & Wine Bar";
+                  placeAddress = "8970 University Center Ln, San Diego, CA 92122";
+                }
+
+                else if(messageContent == "italian")  {
+                  placeName = "Bella Vista Social Club & Caffe";
+                  placeAddress = "2880 Torrey Pines Scenic Dr, La Jolla, CA 92037";
+                }
+
+                else if(messageContent == "thai")  {
+                  placeName = "Star Anise Thai Cuisine";
+                  placeAddress = "8935 Towne Centre Dr, San Diego, CA 92122";
+                }
+
+                else if(messageContent == "mediterranean")  {
+                  placeName = "Almaz Restaurant";
+                  placeAddress = "10920 Roselle St, San Diego, CA 92121"
+                }
+
+                else if(messageContent == "korean")  {
+                  placeName = "Taegukgi Korean BBQ";
+                  placeAddress = "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111";
+                }
+
+                else if(messageContent == "spanish")  {
+                  placeName = "Costa Brava";
+                  placeAddress = "1653 Garnet Ave, San Diego, CA 92109";
+                }
+
+                else if(messageContent == "food")  {
+                  message = "You should go to a place called Almaz Restaurant located at 10920 Roselle St, San Diego, CA 92121.";
+                }
+
+                else  {
+                  placeName = "NULL";
+                }
+
+                if(placeName != "NULL")  {
+                  message = "You should go to a place called " + placeName + " located at <a href=" + placeAddress + ">" + placeAddress + "</a>. Would you like directions to this place or do you want another type of food?";
+                  foodSearched = true;
+                  directionsAsked = false;
+                    /*fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
+                      if (err) return console.log(err);
+                        console.log('Hello World > helloworld.txt');
+                    });*/
+                    //$('#messages').append($('<li class="animated fadeInUp">').text(message));
+
+                    /*socket.on('chat message', function(msg) {
+                      $('#messages').append($('<li class="animated fadeInUp">').text(msg));
+                      console.log("shit");
+                    });*/
+                }
+
+                else  {
+                  message = "I can't find a place for the type of food you asked for. Is there anything else you would like?";
+                  foodSearched = false;
+                }
+              }
+
+              else if(foodSearched == true && directionsAsked == false)  {
+                if(intentHashtable.hasOwnProperty('acceptance'))  {
+                  message = "Here are the directions that you asked for: https://www.google.com/maps/@32.8717299,-117.2264455,15z Would you like to add this place to your favorites or is there another type of food you want?";
+                  
+                }
+
+                else  {
+                  message = "Would you like to add this place to your favorites or is there another type of food you want?"
+                }
+
+                directionsAsked = true;
+              }
+
+              else if(foodSearched == true && intentHashtable.hasOwnProperty('acceptance') ) {
+                foodSearched = false;
+                message = "I will add this to your favorites now. Is there another type of food you want?";
+                /*$.ajax({
+                  url: '/data/restaurants.json',
+                  data: '',
+                  dataType: 'jsonp',
+                  method: 'GET',
+                  success: function(response1) {
+                    console.log(response1);
+                  }
+                })*/
+              }
+
+              else  {
+                message = "I can't find anything for you.";
+                foodSearched = false;
+              }
+              
+              $('#messages').append($('<li class="animated fadeInUp">').text(message));
+          }
+        });
+   	 });
+
+
+
+</script>
+
+  </body>
+</html>
