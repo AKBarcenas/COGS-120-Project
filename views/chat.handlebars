@@ -94,7 +94,8 @@
               console.log("success!", response);
               var foodFound = true;
               intentHashtable = response.entities;
-              if(intentHashtable.hasOwnProperty('food') ) {
+              if(intentHashtable.hasOwnProperty('food') && !intentHashtable.hasOwnProperty('favorites') 
+                && !intentHashtable.hasOwnProperty('directions')) {
                 messageContent = intentHashtable["food"][0]["value"];
                 console.log(messageContent);
 
@@ -204,7 +205,7 @@
               }
 
               else if(foodSearched == true && directionsAsked == false)  {
-                if(intentHashtable.hasOwnProperty('acceptance'))  {
+                if((intentHashtable.hasOwnProperty('acceptance') || intentHashtable.hasOwnProperty('directions')) && !intentHashtable.hasOwnProperty('rejection'))  {
                   message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites or is there another type of food you want?";
                   
                 }
@@ -216,7 +217,8 @@
                 directionsAsked = true;
               }
 
-              else if(foodSearched == true && intentHashtable.hasOwnProperty('acceptance') ) {
+              else if(foodSearched == true && (intentHashtable.hasOwnProperty('acceptance') || 
+                  intentHashtable.hasOwnProperty('favorites') && !intentHashtable.hasOwnProperty('rejection')) ) {
                 foodSearched = false;
                 message = "I will add this to your favorites now. Is there another type of food you want?";
 
