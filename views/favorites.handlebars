@@ -10,7 +10,10 @@
 	<link href="/css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	
+</body>
+
 
 </head>
 
@@ -37,18 +40,27 @@
 			<h2 style="text-align: center;">Your Favorites</h2>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-		{{#each favorites}}
-		<p>{{name}} --- {{description}}</p>
-		<p>{{location}}</p>
-		<a href="#" onClick='alert("{{name}} DELETE");' id="deleteBtn">DELETE</a>
-		<hr>
-		{{/each}}
-		</div>
-	</div> <!-- End row -->
+	{{#each favorites}}
+		<div class="row" style="display: block;">
+			<div class="col-md-6 col-md-offset-3">	
+				<p>{{name}} --- {{description}}</p>
+				<p>{{location}}</p>
+				<a href="#" class="deleteBtn">DELETE</a>
+				<hr>
+			</div>
+		</div> <!-- End row -->
+	{{/each}}
 </div> <!-- End Container -->
 </section> 	
-</body>
+<script>
+	
+		$(".deleteBtn").click(function(){
+			$(this).prev().remove();
+ 			$(this).prev().remove();
+ 			$(this).next().remove();
+ 			$(this).remove();
+		});
+	</script>
+
 
 </html>
