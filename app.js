@@ -15,6 +15,7 @@ var chat = require('./routes/chat');
 var profile = require('./routes/profile');
 var login = require('./routes/login');
 var favorites = require('./routes/favorites');
+var preferences2 = require('./routes/preferences2');
 
 var add = require('./routes/add');
 
@@ -53,6 +54,7 @@ app.get('/profile', profile.view);
 app.get('/chat', chat.view);
 app.get('/login', login.view);
 app.get('/favorites', favorites.view);
+app.get('/preferences2', preferences2.view);
 app.get('/add', add.addFavorite);
 
 
