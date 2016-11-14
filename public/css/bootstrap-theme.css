@@ -38,13 +38,13 @@
 
 .btn-default {
   text-shadow: 0 1px 0 #fff;
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+  /*background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);*/
+  /*background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);*/
   background-repeat: repeat-x;
   border-color: #dbdbdb;
   border-color: #ccc;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);*/
 }
 
 .btn-default:hover,
@@ -81,6 +81,7 @@
 }
 
 .btn-success {
+  background-color:#000;
   background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
   background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
   background-repeat: repeat-x;
