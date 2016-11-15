@@ -103,7 +103,7 @@
                 var containsDirections = intentHashtable.hasOwnProperty('directions');
                 var containsAcceptance = intentHashtable.hasOwnProperty('acceptance');
                 var containsRejection = intentHashtable.hasOwnProperty('rejection');
-                var containsAdd = intentHashtable.hasOwnProperty('add');
+                var containsAddition = intentHashtable.hasOwnProperty('addition');
 
                 if(containsFood && !containsFavorites && !containsDirections /*intentHashtable.hasOwnProperty('food') && !intentHashtable.hasOwnProperty('favorites') 
                   && !intentHashtable.hasOwnProperty('directions')*/) {
@@ -209,28 +209,36 @@
                   directionsAsked = true;
                 }
 
-                else if(foodSearched == true && (intentHashtable.hasOwnProperty('acceptance') || 
-                    intentHashtable.hasOwnProperty('favorites') && !intentHashtable.hasOwnProperty('rejection')) ) {
-                  foodSearched = false;
-                  message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
+                else if(foodSearched == true /*(intentHashtable.hasOwnProperty('acceptance') || 
+                    intentHashtable.hasOwnProperty('favorites') && !intentHashtable.hasOwnProperty('rejection'))*/ ) {
 
-                  $.ajax({
-                    url: '/add',
-                    data: {
-                      'name': placeName,
-                      'address' : placeAddress,
-                      'food' : messageContent 
-                    },
-                    //dataType: 'jsonp',
-                    //method: 'GET',
-                    success: function(response1) {
-                      console.log(response1);
-                    }
-                  })
+                  foodSearched = false;
+                  if((containsAcceptance || containsFavorites || containsAddition) && !containsRejection)  {
+                    message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
+
+                    $.ajax({
+                      url: '/add',
+                      data: {
+                        'name': placeName,
+                        'address' : placeAddress,
+                        'food' : messageContent 
+                      },
+                      //dataType: 'jsonp',
+                      //method: 'GET',
+                      success: function(response1) {
+                        console.log(response1);
+                      }
+                    })
+
+                  }
+
+                  else  {
+                    message = "I won't add this to your favorites. Tell me if there is anything else that you would like to eat.";
+                  }
                 }
 
                 else  {
-                  message = "I can't find anything for you.";
+                  message = "I'm not sure what you are trying to tell me. Let's try finding another food item you want to have.";
                   foodSearched = false;
                 }
                 
