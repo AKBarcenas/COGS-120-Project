@@ -95,6 +95,14 @@
               console.log("success!", response);
               var foodFound = true;
               intentHashtable = response.entities;
+              
+              var containsFood = intentHashtable.hasOwnProperty('food');
+              var containsFavorites = intentHashtable.hasOwnProperty('favorites');
+              var containsDirections = intentHashtable.hasOwnProperty('directions');
+              var containsAcceptance = intentHashtable.hasOwnProperty('acceptance');
+              var containsRejection = intentHashtable.hasOwnProperty('rejection');
+              var containsAdd = intentHashtable.hasOwnProperty('add');
+
               if(intentHashtable.hasOwnProperty('food') && !intentHashtable.hasOwnProperty('favorites') 
                 && !intentHashtable.hasOwnProperty('directions')) {
                 messageContent = intentHashtable["food"][0]["value"];
@@ -102,24 +110,6 @@
 
                 // Cancer code below.
                 if(messageContent == "tacos" || messageContent == "taco")  {
-                  /*
-                	$.ajax({
-                    type: 'GET',
-                   	url: '/data/restaurants.json',
-                   	data: data,
-                   	async: false,
-                  	beforeSend: function (xhr) {
-                      if (xhr && xhr.overrideMimeType) {
-                        xhr.overrideMimeType('application/json;charset=utf-8');
-                      }
-                    },
-				            dataType: 'json',
-				            success: function (data) {
-				            //Do stuff with the JSON data
-				           }
-				          });
-                  */
-                
                   placeName = "Rigobertos Taco Shop";
                   placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
                 }
@@ -186,7 +176,6 @@
                     placeName = "Star Anise Thai Cuisine";
                     placeAddress = "8935 Towne Centre Dr, San Diego, CA 92122";
                   }
-                  /*message = "You should go to a place called Almaz Restaurant located at 10920 Roselle St, San Diego, CA 92121.";*/
                 }
 
                 else  {
@@ -194,25 +183,25 @@
                 }
 
                 if(placeName != "NULL")  {
-                  message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place or do you want another type of food?";
+                  message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place? You can also tell me another type of food that you want.";
                   foodSearched = true;
                   directionsAsked = false;
                 }
 
                 else  {
-                  message = "I can't find a place for the type of food you asked for. Is there anything else you would like?";
+                  message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
                   foodSearched = false;
                 }
               }
 
               else if(foodSearched == true && directionsAsked == false)  {
                 if((intentHashtable.hasOwnProperty('acceptance') || intentHashtable.hasOwnProperty('directions')) && !intentHashtable.hasOwnProperty('rejection'))  {
-                  message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites or is there another type of food you want?";
+                  message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
                   
                 }
 
                 else  {
-                  message = "Would you like to add this place to your favorites or is there another type of food you want?";
+                  message = "Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
                 }
 
                 directionsAsked = true;
