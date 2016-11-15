@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'/ >
 
     <script>
        //Toggles for click to expand
@@ -30,7 +31,7 @@
     <div class="navbar-header">
 
       <a class="navbar-brand" href="../chat/">
-        <img src="/images/icon.png"  class="img" width="30"></img>Food.AI</a>
+        <img src="/images/icon.png"  class="img" width="30"></img>  Food.AI</a>
 		<a href="../about/" style="float: right; padding-right: 10px; padding-top: 15px;">About</a> 
         <a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px; color:white">Preferences</a>      
         <a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
@@ -41,6 +42,13 @@
 </nav>
 	<!-- this is a comment in HTML -->
 	<div class="container">
+	
+	<!-- lol what's indenting -->
+	<!-- start form -->
+	<!--  onsubmit="return checkWholeForm46465(this)"
+	form name="addUser" method="post" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=83516&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}&JSON=1" id="contact_form">
+	-->
+	
     <p class="fade" id="hello">Let's get you set up.</p>
     <center class="animated fadeInUp">
     <h1>GENERAL</h1>
@@ -48,48 +56,14 @@
 	<label for="fader">Distance (mi): </label> 
 	<output for="fader" id="miles" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
 	<br>
-	<input type="range" min="1" max="50" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
+	<input type="range" name="distance" min="1" max="50" value="10" id="fader" step="1" oninput="outputMiles(value)" style="width: 240px;">
 	
 	<h2>Maximum price per person?</h2>
 	<label for="fader">Price ($): </label> 
 	<output for="fader" id="dollars" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
 	<br>
-	<input type="range" min="1" max="100" value="10" id="fader" step="1" oninput="outputDollars(value)" style="width:240px;">
+	<input type="range" name="price" min="1" max="100" value="10" id="fader" step="1" oninput="outputDollars(value)" style="width:240px;">
 
-    <h2>Do you have any pets?</h2>
-    <center>
-      <div class="container">
-    <div class="row">
-        <div class="form-group">
-            <div class="items-collection">
-                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <div class="info-block block-info clearfix">
-                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="nuts" autocomplete="off" value="nuts">
-                                    <span class="fa fa-car fa-2x"></span>
-                                    <h5>Cat</h5>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div></div></div>
-        <div class="form-group">
-            <div class="items-collection">
-                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <div class="info-block block-info clearfix">
-                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="nuts" autocomplete="off" value="nuts">
-                                    <span class="fa fa-car fa-2x"></span>
-                                    <h5>Dog</h5>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div></div></div></div></div>
 <h2>Got any allergies?</h2>
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
   <div class="container">
@@ -127,6 +101,20 @@
                         <div data-toggle="buttons" class="btn-group itemcontent">
                             <label class="btn btn-default">
                                 <div class="itemcontent">
+                                    <input type="checkbox" name="soy" autocomplete="off" value="soy">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>Egg</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-default">
+                                <div class="itemcontent">
                                     <input type="checkbox" name="gluten" autocomplete="off" value="gluten">
                                     <span class="fa fa-laptop fa-2x"></span>
                                     <h5>Gluten</h5>
@@ -153,7 +141,7 @@
                         <div data-toggle="buttons" class="btn-group itemcontent">
                             <label class="btn btn-default">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="milk">
+                                    <input type="checkbox" name="milk" autocomplete="off" value="milk">
                                     <span class="fa fa-lock fa-2x"></span>
                                     <h5>Milk</h5>
                                 </div>
@@ -166,7 +154,7 @@
                         <div data-toggle="buttons" class="btn-group itemcontent">
                             <label class="btn btn-default">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="other">
+                                    <input type="checkbox" name="other" autocomplete="off" value="other">
                                     <span class="fa fa-barcode fa-2x"></span>
                                     <h5>Other</h5>
                                 </div>
@@ -181,15 +169,48 @@
     </div>
 
 </div>
+	
+	<div style="height: 40px;">&nbsp;</div>
+	
+	<h1>CUISINES</h1>
+    <h2>Help us get to know your taste buds! <br>How much do you enjoy...</h2>
+    <p>(On a scale of 1-10. Feel free to skip any!)</p>
+    <H2>Japanese food?</H2>
+    <output for="fader" id="japanese" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <br>
+    <input type="range" name="japanese" min="1" max="10" value="10" id="fader" step="1" oninput="outputJapanese(value)" style="width: 240px;">
+    
+    <H2>Korean food?</H2>
+    <output for="fader" id="korean" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <br>
+    <input type="range" name="korean" min="1" max="10" value="10" id="fader" step="1" oninput="outputKorean(value)" style="width: 240px;">
+    
+    <H2>Mexican food?</H2>
+    <output for="fader" id="mexican" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <br>
+    <input type="range" name="mexican" min="1" max="10" value="10" id="fader" step="1" oninput="outputMexican(value)" style="width: 240px;">
+    
+    <H2>American food?</H2>
+    <output for="fader" id="american" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <br>
+    <input type="range" name="american" min="1" max="10" value="10" id="fader" step="1" oninput="outputAmerican(value)" style="width: 240px;">
+    
+    <H2>Chinese food?</H2>
+    <output for="fader" id="chinese" style="display: inline; position: relative; top: -2px; font-size: 18px;">10</output>
+    <br>
+    <input type="range" name="chinese" min="1" max="10" value="10" id="fader" step="1" oninput="outputChinese(value)" style="width: 240px;">
+    
+    <!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
   
 <!--http://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_forms_slider-->
-
-	<a href="/preferences2/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
-  				NEXT &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
+	<br>
+	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+  				SAVE and START CHATTING &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
 	</a>
 
     <a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
     </a>
+    <!-- </form>  end form -->
 	
   </div>
   <!--main end-->
@@ -217,7 +238,36 @@ function outputDollars(vol) {
 }
 
 
+$(function () {
+    $('#search').on('keyup', function () {
+        var pattern = $(this).val();
+        $('.items-collection .items').hide();
+        $('.items-collection .items').filter(function () {
+            return $(this).text().match(new RegExp(pattern, 'i'));
+        }).show();
+    });
+});
 
+
+function outputJapanese(vol) {
+    document.querySelector('#japanese').value = vol;
+}
+
+function outputKorean(vol) {
+    document.querySelector('#korean').value = vol;
+}
+
+function outputMexican(vol) {
+    document.querySelector('#mexican').value = vol;
+}
+
+function outputAmerican(vol) {
+    document.querySelector('#american').value = vol;
+}
+
+function outputChinese(vol) {
+    document.querySelector('#chinese').value = vol;
+}
 
 </script>
   </div>
