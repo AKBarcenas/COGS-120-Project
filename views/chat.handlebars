@@ -185,11 +185,22 @@
                   }
 
                   if(placeName != "NULL")  {
-                    message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place? You can also tell me another type of food that you want.";
-                    foodSearched = true;
-                    directionsAsked = false;
-                  }
-
+                  	var randomMessage = Math.random();
+                  	if (randomMessage <= 0.333) {
+                    	message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place? You can also tell me another type of food that you want.";
+                    	foodSearched = true;
+                    	directionsAsked = false;
+                    }
+                    else if (randomMessage <= 0.666) {
+                    	message = "Yo, check out " + placeName + " located at " + placeAddress + ". You want directions? Or you want another type of food?";
+                    	foodSearched = true;
+                    	directionsAsked = false;
+                  	}
+                  	else {
+                  		message = "It's lit fam. Go to " + placeName + " located at " + placeAddress + ". I can hit you up with directions or another type of food.";
+                    	foodSearched = true;
+                    	directionsAsked = false;    		
+                  	}
                   else  {
                     message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
                     foodSearched = false;
