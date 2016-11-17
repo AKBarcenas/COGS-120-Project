@@ -1,72 +1,159 @@
 {
 	"japanese": [
 		{
-			"id": "1000",
 			"placeName": "Tajima",
-			"description": "Ramen",
-			"24hr":"no",
+			"description": "Ramen, Japanese",
 			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
 		},
 		{
-			"id": "1001",
 			"placeName": "Sushi Ota",
-			"description": "Sushi",
-			"24hr":"no",
+			"description": "Sushi, Japanese",
 			"placeAddress": "4529 Mission bay Dr, San Diego, CA 92109"     
 		} 
 	],
 	"chinese": [
 		{
-			"id": "1100",
 			"placeName": "Panda Express",
-			"description": "Fast",
-			"24hr":"no",
+			"description": "Fast, Chinese",
 			"placeAddress": "9500 Gilman Dr, La Jolla, CA 92093"      
 		},
 		{
-			"id": "1101",
 			"placeName": "Mandarin House",
-			"description": "Restaurant",
-			"24hr":"no",
+			"description": "Restaurant, Chinese",
 			"placeAddress": "6765 La Jolla Blvd, La Jolla, CA 92037"     
 		} 
 	],
 	"seafood": [
 		{
-			"id": "2000",
 			"placeName": "El Pescador Fish Market and Restaurant",
-			"description": "Fish",
-			"24hr":"no",
+			"description": "Fish, Seafood",
 			"placeAddress": "634 Pearl St, La Jolla, CA 92037"      
 		},
 		{
-			"id": "2001",
 			"placeName": "Shore Rider",
-			"description": "Fish",
-			"24hr":"no",
-			"placeAddress": "2168 Avenida De La Playa"     
+			"description": "Fish, Seafood",
+			"placeAddress": "2168 Avenida De La Playa, La Jolla, CA 92037"     
+		},
+		{
+			"placeName": "Truluck's",
+			"description": "Seafood",
+			"placeAddress": "8990 University Center Ln, San Diego, CA 92122"
 		} 
 	],
 	"mexican": [
 		{
-			"id":"3000",
 			"placeName": "Rigoberto's Taco Shop",
-			"description": "Tacos",
-			"24hr":"no",
+			"description": "Tacos, Mexican",
 			"placeAddress": "7094 Miramar Rd, San Diego, CA 92121"      
 		},
 		{
-			"id":"3001",
 			"placeName": "Tacos El Gordo",
-			"description": "Tacos",
-			"24hr":"no",
+			"description": "Tacos, Mexican",
 			"placeAddress": "689 H Street, Chula Vista, CA 91910"     
 		},
 		{
-			"id":"3002",
 			"placeName": "Vallartas",
-			"description": "Tacos, Burritos",
-			"24hr":"yes",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
+		} 
+	],
+	"taco": [
+		{
+			"placeName": "Rigoberto's Taco Shop",
+			"description": "Tacos, Mexican",
+			"placeAddress": "7094 Miramar Rd, San Diego, CA 92121"      
+		},
+		{
+			"placeName": "Tacos El Gordo",
+			"description": "Tacos, Mexican",
+			"placeAddress": "689 H Street, Chula Vista, CA 91910"     
+		},
+		{
+			"placeName": "Vallartas",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
+		} 
+	],
+	"ramen": [
+		{
+			"placeName": "Tajima",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
+		}
+	],
+	"steak": [
+		{
+			"placeName": "Fleming's Prime Steakhouse & Wine Bar",
+			"description": "Steak, American",
+			"placeAddress": "8970 University Center Ln, San Diego, CA 92122"
+		}
+	],
+	"american": [
+		{
+			"placeName": "Fleming's Prime Steakhouse & Wine Bar",
+			"description": "Steak, American",
+			"placeAddress": "8970 University Center Ln, San Diego, CA 92122"
+		}
+	],
+	"italian": [
+		{
+			"placeName": "Bella Vista Social Club & Caffe",
+			"description": "Italian",
+			"placeAddress": "2880 Torrey Pines Scenic Dr, La Jolla, CA 92037"
+		}
+	],
+	"thai": [
+		{
+			"placeName": "Star Anise Thai Cuisine",
+			"description": "Thai",
+			"placeAddress": "8935 Towne Centre Dr, San Diego, CA 92122"
+		}
+	],
+	"mediterranean": [
+		{
+			"placeName": "Almaz Restaurant",
+			"description": "Mediterranean",
+			"placeAddress": "10920 Roselle St, San Diego, CA 92121"
+		}
+	],
+	"korean": [
+		{
+			"placeName": "Taegukgi Korean BBQ",
+			"description": "Korean",
+			"placeAddress": "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111"
+		}
+	],
+	"spanish": [
+		{
+			"placeName": "Costa Brava",
+			"description": "Spanish",
+			"placeAddress": "1653 Garnet Ave, San Diego, CA 92109"
+		}
+	],
+	"food": [
+		{
+			"placeName": "Costa Brava",
+			"description": "Spanish",
+			"placeAddress": "1653 Garnet Ave, San Diego, CA 92109"
+		},
+		{
+			"placeName": "Star Anise Thai Cuisine",
+			"description": "Thai",
+			"placeAddress": "8935 Towne Centre Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Fleming's Prime Steakhouse & Wine Bar",
+			"description": "Steak, American",
+			"placeAddress": "8970 University Center Ln, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Tajima",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"placeName": "Vallartas",
+			"description": "Tacos, Burritos, Mexican",
 			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
 		} 
 	]

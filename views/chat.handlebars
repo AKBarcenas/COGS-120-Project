@@ -58,6 +58,11 @@
     var directionsAsked = false;
     var placeName = "";
     var placeAddress = "";
+    var placeDescription = "";
+    var foodPlaceMap = {};
+    var message = "";
+
+    
 
     		$('form').submit(function() {
 			socket.emit('chat message', $('#m').val());
@@ -74,6 +79,46 @@
         });*/
         counter += 1;
         console.log(counter);
+
+        /*var testMap = {};
+        testMap["test"] = {
+          "name": "testName",
+          "description": "testfood",
+          "location": "testaddress"
+        };
+
+        if("test" in testMap)  {
+          console.log("maps work bro");
+          var obj = testMap["test"];
+          console.log(obj);
+          console.log(obj.name);
+          console.log(obj.description);
+          console.log(obj.location);
+        }
+
+        if("what" in testMap)  {
+          console.log("ohshitno");
+        }*/
+
+        /*$.ajax({
+          url: '/foodplace',
+          data: {
+            'food' : "tester"
+          },
+            dataType: 'json',
+            method: 'GET',
+            success: function(response) {
+              console.log(response);
+              //var stringRes = JSON.stringify(response);
+              //console.log(stringRes);            },
+
+            error: function(response)  {
+              console.log(response);
+            }
+        })*/
+
+
+
         // Make sure the user sends an actual message.
         if(msg != "")  {
           $('#messages').append($('<li class="animated fadeInUp">').text(msg));
@@ -110,8 +155,41 @@
                   messageContent = intentHashtable["food"][0]["value"];
                   console.log(messageContent);
 
+                  $.ajax({
+                    url: '/foodplace',
+                    data: {
+                      'food' : messageContent
+                    },
+                      dataType: 'json',
+                      method: 'GET',
+                      success: function(response) {
+                        placeName = response.placeName;
+                        placeAddress = response.placeAddress;
+                        placeDescription = response.description;
+                        console.log(placeName);
+                        console.log(placeAddress);
+
+                        if(placeName != "NULL")  {
+                          message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place? You can also tell me another type of food that you want.";
+                          foodSearched = true;
+                          directionsAsked = false;
+                        }
+
+                        else  {
+                          message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
+                          foodSearched = false;
+                        }
+
+                        $('#messages').append($('<li class="animated fadeInUp">').text(message));
+                      },
+
+                      error: function()  {
+                        console.log(response);
+                      }
+                  })
+
                   // Cancer code below.
-                  if(messageContent == "tacos" || messageContent == "taco")  {
+                  /*if(messageContent == "tacos" || messageContent == "taco")  {
                     placeName = "Rigobertos Taco Shop";
                     placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
                   }
@@ -193,56 +271,58 @@
                   else  {
                     message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
                     foodSearched = false;
-                  }
-                }
-
-                else if(foodSearched == true && directionsAsked == false)  {
-                  if((containsAcceptance || containsDirections) && !containsRejection /*(intentHashtable.hasOwnProperty('acceptance') || intentHashtable.hasOwnProperty('directions')) && !intentHashtable.hasOwnProperty('rejection')*/)  {
-                    message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
-                    
-                  }
-
-                  else  {
-                    message = "Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
-                  }
-
-                  directionsAsked = true;
-                }
-
-                else if(foodSearched == true /*(intentHashtable.hasOwnProperty('acceptance') || 
-                    intentHashtable.hasOwnProperty('favorites') && !intentHashtable.hasOwnProperty('rejection'))*/ ) {
-
-                  foodSearched = false;
-                  if((containsAcceptance || containsFavorites || containsAddition) && !containsRejection)  {
-                    message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
-
-                    $.ajax({
-                      url: '/add',
-                      data: {
-                        'name': placeName,
-                        'address' : placeAddress,
-                        'food' : messageContent 
-                      },
-                      //dataType: 'jsonp',
-                      //method: 'GET',
-                      success: function(response1) {
-                        console.log(response1);
-                      }
-                    })
-
-                  }
-
-                  else  {
-                    message = "I won't add this to your favorites. Tell me if there is anything else that you would like to eat.";
-                  }
+                  }*/
                 }
 
                 else  {
-                  message = "I'm not sure what you are trying to tell me. Let's try finding another food item you want to have.";
-                  foodSearched = false;
+                  if(foodSearched == true && directionsAsked == false)  {
+                    if((containsAcceptance || containsDirections) && !containsRejection /*(intentHashtable.hasOwnProperty('acceptance') || intentHashtable.hasOwnProperty('directions')) && !intentHashtable.hasOwnProperty('rejection')*/)  {
+                      message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
+                      
+                    }
+
+                    else  {
+                      message = "Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
+                    }
+
+                    directionsAsked = true;
+                  }
+
+                  else if(foodSearched == true /*(intentHashtable.hasOwnProperty('acceptance') || 
+                      intentHashtable.hasOwnProperty('favorites') && !intentHashtable.hasOwnProperty('rejection'))*/ ) {
+
+                    foodSearched = false;
+                    if((containsAcceptance || containsFavorites || containsAddition) && !containsRejection)  {
+                      message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
+
+                      $.ajax({
+                        url: '/add',
+                        data: {
+                          'name': placeName,
+                          'address' : placeAddress,
+                          'food' : placeDescription 
+                        },
+                        //dataType: 'jsonp',
+                        //method: 'GET',
+                        success: function(response1) {
+                          console.log(response1);
+                        }
+                      })
+
+                    }
+
+                    else  {
+                      message = "I won't add this to your favorites. Tell me if there is anything else that you would like to eat.";
+                    }
+                  }
+
+                  else  {
+                    message = "I'm not sure what you are trying to tell me. Let's try finding another food item you want to have.";
+                    foodSearched = false;
+                  }
+                  
+                  $('#messages').append($('<li class="animated fadeInUp">').text(message));
                 }
-                
-                $('#messages').append($('<li class="animated fadeInUp">').text(message));
             }
           });
         }
