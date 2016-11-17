@@ -128,19 +128,19 @@
                           foodSearched = false;
                         }
 
-                        $('#messages').append($('<li class="animated fadeInUp">').text(message));
+                        $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');
                       },
 
                       error: function()  {
                         console.log(response);
                       }
-                  })
+                  });
                 }
 
                 else  {
                   if(foodSearched == true && directionsAsked == false)  {
                     if((containsAcceptance || containsDirections) && !containsRejection)  {
-                      message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
+                      message = "<a href=\"https://www.google.com/maps/place/" + placeAddress + "\">Click here for the directions that you asked for.</a> Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
                       
                     }
 
@@ -167,7 +167,7 @@
                         success: function(response1) {
                           console.log(response1);
                         }
-                      })
+                      });
 
                     }
 
@@ -181,7 +181,8 @@
                     foodSearched = false;
                   }
                   
-                  $('#messages').append($('<li class="animated fadeInUp">').text(message));
+                  $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');
+                  /*$('#messages').append($('<li class="animated fadeInUp">' + '<a href="http://www.w3schools.com/html/">') + message + $('</a></li>'));*/
                 }
             }
           });
