@@ -58,6 +58,11 @@
     var directionsAsked = false;
     var placeName = "";
     var placeAddress = "";
+    var placeDescription = "";
+    var foodPlaceMap = {};
+    var message = "";
+
+    
 
     		$('form').submit(function() {
 			socket.emit('chat message', $('#m').val());
@@ -65,23 +70,12 @@
 			return false;
     	});
     	socket.on('chat message', function(msg) {
-        /*$.get('https://api.wit.ai/message', {'q': msg, 'access_token': 'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'},function(data,status){
-            $.get('https://api.wit.ai/message/'+data.msg_id,{headers:{'Authorization':'YVEL7HXFTUR3M6QYMX4LTKWL4TCNBGHQ'}},function(data1,status){
-                console.log(data1);                                                    
-            })
-            //$('#messages').append($('<li class="animated fadeInUp">').text(data));
-            //console.log(data);                                                                     
-        });*/
         counter += 1;
         console.log(counter);
+
         // Make sure the user sends an actual message.
         if(msg != "")  {
           $('#messages').append($('<li class="animated fadeInUp">').text(msg));
-
-          /*var restaurant = {
-            placeName = "";
-            placeAddress = "";
-          }*/
           
           var currentPlace;
           // Get entities from the string using wit.ai and prints a hardcoded response.
@@ -105,85 +99,59 @@
                 var containsRejection = intentHashtable.hasOwnProperty('rejection');
                 var containsAddition = intentHashtable.hasOwnProperty('addition');
 
-                if(containsFood && !containsFavorites && !containsDirections /*intentHashtable.hasOwnProperty('food') && !intentHashtable.hasOwnProperty('favorites') 
-                  && !intentHashtable.hasOwnProperty('directions')*/) {
+                if(containsFood && !containsFavorites && !containsDirections) {
                   messageContent = intentHashtable["food"][0]["value"];
                   console.log(messageContent);
 
-                  // Cancer code below.
-                  if(messageContent == "tacos" || messageContent == "taco")  {
-                    placeName = "Rigobertos Taco Shop";
-                    placeAddress = "7094 Miramar Rd, San Diego, CA 92121"
-                  }
+                  $.ajax({
+                    url: '/foodplace',
+                    data: {
+                      'food' : messageContent
+                    },
+                      dataType: 'json',
+                      method: 'GET',
+                      success: function(response) {
+                        placeName = response.placeName;
+                        placeAddress = response.placeAddress;
+                        placeDescription = response.description;
+                        console.log(placeName);
+                        console.log(placeAddress);
 
-                  else if(messageContent == "ramen" || messageContent == "japanese")  {
-                    placeName = "Tajima Ramen House";
-                    placeAddress = "4681 Convoy St, San Diego, CA 92111";
-                  }
+                        if(placeName != "NULL")  {
+                          message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place? You can also tell me another type of food that you want.";
+                          foodSearched = true;
+                          directionsAsked = false;
+                        }
 
-                  else if(messageContent == "seafood")  {
-                    placeName = "Truluck's";
-                    placeAddress = "8990 University Center Ln, San Diego, CA 92122";
-                  }
+                        else  {
+                          message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
+                          foodSearched = false;
+                        }
 
-                  else if(messageContent == "steak" || messageContent == "american")  {
-                    placeName = "Fleming's Prime Steakhouse & Wine Bar";
-                    placeAddress = "8970 University Center Ln, San Diego, CA 92122";
-                  }
+                        $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');
+                      },
 
-                  else if(messageContent == "italian")  {
-                    placeName = "Bella Vista Social Club & Caffe";
-                    placeAddress = "2880 Torrey Pines Scenic Dr, La Jolla, CA 92037";
-                  }
+                      error: function()  {
+                        console.log(response);
+                      }
+                  });
+                }
 
-                  else if(messageContent == "thai")  {
-                    placeName = "Star Anise Thai Cuisine";
-                    placeAddress = "8935 Towne Centre Dr, San Diego, CA 92122";
-                  }
-
-                  else if(messageContent == "mediterranean")  {
-                    placeName = "Almaz Restaurant";
-                    placeAddress = "10920 Roselle St, San Diego, CA 92121"
-                  }
-
-                  else if(messageContent == "korean")  {
-                    placeName = "Taegukgi Korean BBQ";
-                    placeAddress = "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111";
-                  }
-
-                  else if(messageContent == "spanish")  {
-                    placeName = "Costa Brava";
-                    placeAddress = "1653 Garnet Ave, San Diego, CA 92109";
-                  }
-
-                  else if(messageContent == "food")  {
-                    var random = Math.random();
-
-                    if(random <= .25)  {
-                      placeName = "Taegukgi Korean BBQ";
-                      placeAddress = "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111";
-                    }
-
-                    else if(random <= .50)  {
-                      placeName = "Tajima Ramen House";
-                      placeAddress = "4681 Convoy St, San Diego, CA 92111";
-                    }
-
-                    else if(random <= .75)  {
-                      placeName = "Fleming's Prime Steakhouse & Wine Bar";
-                      placeAddress = "8970 University Center Ln, San Diego, CA 92122";
+                else  {
+                  if(foodSearched == true && directionsAsked == false)  {
+                    if((containsAcceptance || containsDirections) && !containsRejection)  {
+                      message = "<a href=\"https://www.google.com/maps/place/" + placeAddress + "\">Click here for the directions that you asked for.</a> Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
+                      
                     }
 
                     else  {
-                      placeName = "Star Anise Thai Cuisine";
-                      placeAddress = "8935 Towne Centre Dr, San Diego, CA 92122";
+                      message = "Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
                     }
+
+                    directionsAsked = true;
                   }
 
-                  else  {
-                    placeName = "NULL";
-                  }
-
+/*<<<<<<< HEAD
                   if(placeName != "NULL")  {
                   	var randomMessage = Math.random();
                   	if (randomMessage <= 0.333) {
@@ -204,57 +172,41 @@
                   }
                   else  {
                     message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
+=======*/
+                  else if(foodSearched == true) {
+
+//>>>>>>> Cleanup
+                    foodSearched = false;
+                    if((containsAcceptance || containsFavorites || containsAddition) && !containsRejection)  {
+                      message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
+
+                      $.ajax({
+                        url: '/add',
+                        data: {
+                          'name': placeName,
+                          'address' : placeAddress,
+                          'food' : placeDescription 
+                        },
+                        success: function(response1) {
+                          console.log(response1);
+                        }
+                      });
+
+                    }
+
+                    else  {
+                      message = "I won't add this to your favorites. Tell me if there is anything else that you would like to eat.";
+                    }
+                  }
+
+                  else  {
+                    message = "I'm not sure what you are trying to tell me. Let's try finding another food item you want to have.";
                     foodSearched = false;
                   }
+                  
+                  $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');
+                  /*$('#messages').append($('<li class="animated fadeInUp">' + '<a href="http://www.w3schools.com/html/">') + message + $('</a></li>'));*/
                 }
-
-                else if(foodSearched == true && directionsAsked == false)  {
-                  if((containsAcceptance || containsDirections) && !containsRejection /*(intentHashtable.hasOwnProperty('acceptance') || intentHashtable.hasOwnProperty('directions')) && !intentHashtable.hasOwnProperty('rejection')*/)  {
-                    message = "Here are the directions that you asked for: (https://www.google.com/maps/place/" + placeAddress + ") Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
-                    
-                  }
-
-                  else  {
-                    message = "Would you like to add this place to your favorites? You can also tell me another type of food that you want.";
-                  }
-
-                  directionsAsked = true;
-                }
-
-                else if(foodSearched == true /*(intentHashtable.hasOwnProperty('acceptance') || 
-                    intentHashtable.hasOwnProperty('favorites') && !intentHashtable.hasOwnProperty('rejection'))*/ ) {
-
-                  foodSearched = false;
-                  if((containsAcceptance || containsFavorites || containsAddition) && !containsRejection)  {
-                    message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
-
-                    $.ajax({
-                      url: '/add',
-                      data: {
-                        'name': placeName,
-                        'address' : placeAddress,
-                        'food' : messageContent 
-                      },
-                      //dataType: 'jsonp',
-                      //method: 'GET',
-                      success: function(response1) {
-                        console.log(response1);
-                      }
-                    })
-
-                  }
-
-                  else  {
-                    message = "I won't add this to your favorites. Tell me if there is anything else that you would like to eat.";
-                  }
-                }
-
-                else  {
-                  message = "I'm not sure what you are trying to tell me. Let's try finding another food item you want to have.";
-                  foodSearched = false;
-                }
-                
-                $('#messages').append($('<li class="animated fadeInUp">').text(message));
             }
           });
         }
