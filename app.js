@@ -22,7 +22,7 @@ var add = require('./routes/add');
 var newchat = require('./routes/newchat');
 var about = require('./routes/about');
 
-//var foodPlace = require('./routes/foodplace');
+var foodPlace = require('./routes/foodplace');
 
 // Example route
 // var user = require('./routes/user');
