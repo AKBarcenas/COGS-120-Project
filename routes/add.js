@@ -17,5 +17,13 @@ exports.addFavorite = function(req, res) {
       "location": address
     }
 
+    var test = newFavorite;
+    console.log(test);
+    test.name = "test";
+    test.description = "test";
+    test.location = "test";
+    console.log(test);
+
+
     data.favorites.push(newFavorite);
 }

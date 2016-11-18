@@ -23,6 +23,7 @@ var newchat = require('./routes/newchat');
 var about = require('./routes/about');
 
 var foodPlace = require('./routes/foodPlace');
+var set = require('./routes/set');
 
 // Example route
 // var user = require('./routes/user');
@@ -59,6 +60,7 @@ app.get('/favorites', favorites.view);
 app.get('/preferences2', preferences2.view);
 app.get('/add', add.addFavorite);
 app.get('/foodplace', foodPlace.getFoodPlace);
+app.get('/set', set.setPreference);
 
 
 app.get('/newchat', newchat.view);

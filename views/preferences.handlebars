@@ -204,7 +204,7 @@
   
 <!--http://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_forms_slider-->
 	<br>
-	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;" onclick="testFunction();">
   				SAVE and START CHATTING &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
 	</a>
 
@@ -217,6 +217,9 @@
 
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
 <script>
+$( document ).ready(function() {
+});
+
 $(function () {
     $('#search').on('keyup', function () {
         var pattern = $(this).val();
@@ -267,6 +270,26 @@ function outputAmerican(vol) {
 
 function outputChinese(vol) {
     document.querySelector('#chinese').value = vol;
+}
+
+function testFunction()  {
+    console.log("IT WORKS");
+    console.log(document.querySelector('#chinese').value);
+    $.ajax({
+        url: '/set',
+        data: {
+            'miles': document.querySelector('#miles').value,
+            'dollars': document.querySelector('#dollars').value,
+            'japanese': document.querySelector('#japanese').value,
+            'korean': document.querySelector('#korean').value,
+            'mexican': document.querySelector('#mexican').value,
+            'american': document.querySelector('#american').value,
+            'chinese': document.querySelector('#chinese').value
+        },
+        success: function(response1) {
+            console.log(response1);
+        }
+    });
 }
 
 </script>
