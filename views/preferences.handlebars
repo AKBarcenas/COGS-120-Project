@@ -49,7 +49,18 @@
 	form name="addUser" method="post" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=83516&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}&JSON=1" id="contact_form">
 	-->
 	
-    <p class="fade" id="hello">Let's get you set up.</p>
+	{{#if showAlternate}}
+	<center>
+    	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+    		SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+    	</a>
+    </center>
+    {{else}}
+    	<!-- Don't worry about this -->
+	{{/if}}
+	
+	
+	
     <center class="animated fadeInUp">
     <h1>GENERAL</h1>
 	<h2>How far are you willing to travel?</h2>
