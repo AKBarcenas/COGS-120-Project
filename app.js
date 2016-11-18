@@ -62,6 +62,7 @@ app.get('/preferences2', preferences2.view);
 app.get('/add', add.addFavorite);
 app.get('/foodplace', foodPlace.getFoodPlace);
 app.get('/set', set.setPreference);
+app.get('/get', set.getPreference);
 
 
 app.get('/newchat', newchat.view);

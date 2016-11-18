@@ -229,6 +229,27 @@
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
 <script>
 $( document ).ready(function() {
+    $.ajax({
+        url: '/get',
+        dataType: 'json',
+        method: 'GET',
+        success: function(response) {
+            console.log(response);
+            document.querySelector('#miles').value = response.miles;
+            document.querySelector('#dollars').value = response.dollars;
+            document.querySelector('#japanese').value = response.japanese;
+            document.querySelector('#korean').value = response.korean;
+            document.querySelector('#mexican').value = response.mexican;
+            document.querySelector('#american').value = response.american;
+            document.querySelector('#chinese').value = response.chinese;
+        },
+
+        error: function(response)  {
+            console.log(response);
+        }
+    });
+
+
 });
 
 $(function () {

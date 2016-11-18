@@ -34,3 +34,7 @@ exports.setPreference = function(req, res) {
 		fs.writeFileSync("../data/preferences.json", data);
 	}*/
 }
+
+exports.getPreference = function(req, res) {
+	res.status(200).json(data);
+}
