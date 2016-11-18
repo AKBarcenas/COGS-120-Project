@@ -52,6 +52,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/preferences', preferences.view);
+app.get('/altpreferences', preferences.viewAlt);
 app.get('/profile', profile.view);
 app.get('/chat', chat.view);
 app.get('/login', login.view);
