@@ -130,6 +130,13 @@
 			"placeAddress": "1653 Garnet Ave, San Diego, CA 92109"
 		}
 	],
+	"jimmy": [
+		{
+			"placeName": "Jimmy's House",
+			"description": "asdfjkl",
+			"placeAddress": "Just s*** on them"
+		}
+	],
 	"food": [
 		{
 			"placeName": "Costa Brava",

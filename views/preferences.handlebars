@@ -78,15 +78,16 @@
 <h2>Got any allergies?</h2>
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
   <div class="container">
+  <!-- deez buttons -->
     <div class="row">
         <div class="form-group">
             <div class="items-collection">
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="deeznutbutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="nuts" autocomplete="off" value="nuts">
+                                    <input type="checkbox" id="deeznuts" name="nuts" autocomplete="off" value="nuts">
                                     <span class="fa fa-car fa-2x"></span>
                                     <h5>Peanuts/Nuts</h5>
                                 </div>
@@ -97,9 +98,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="soybutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="soy" autocomplete="off" value="soy">
+                                    <input type="checkbox" id="deezsoy" name="soy" autocomplete="off" value="soy">
                                     <span class="fa fa-truck fa-2x"></span>
                                     <h5>Soy</h5>
                                 </div>
@@ -110,9 +111,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="eggbutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="soy" autocomplete="off" value="soy">
+                                    <input type="checkbox" id="deezeggs" name="soy" autocomplete="off" value="soy">
                                     <span class="fa fa-truck fa-2x"></span>
                                     <h5>Egg</h5>
                                 </div>
@@ -124,9 +125,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="glutenbutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="gluten" autocomplete="off" value="gluten">
+                                    <input type="checkbox" id="deezglutens" name="gluten" autocomplete="off" value="gluten">
                                     <span class="fa fa-laptop fa-2x"></span>
                                     <h5>Gluten</h5>
                                 </div>
@@ -137,9 +138,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="fishbutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="fish" autocomplete="off" value="fish">
+                                    <input type="checkbox" id="deezfish" name="fish" autocomplete="off" value="fish">
                                     <span class="fa fa-cube fa-2x"></span>
                                     <h5>Fish/Shellfish</h5>
                                 </div>
@@ -150,9 +151,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="milkbutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="milk" autocomplete="off" value="milk">
+                                    <input type="checkbox" id="deezmilk" name="milk" autocomplete="off" value="milk">
                                     <span class="fa fa-lock fa-2x"></span>
                                     <h5>Milk</h5>
                                 </div>
@@ -163,9 +164,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
+                            <label class="btn btn-default" id="otherbutton">
                                 <div class="itemcontent">
-                                    <input type="checkbox" name="other" autocomplete="off" value="other">
+                                    <input type="checkbox" id="other" name="other" autocomplete="off" value="other">
                                     <span class="fa fa-barcode fa-2x"></span>
                                     <h5>Other</h5>
                                 </div>
@@ -242,6 +243,42 @@ $( document ).ready(function() {
             document.querySelector('#mexican').value = response.mexican;
             document.querySelector('#american').value = response.american;
             document.querySelector('#chinese').value = response.chinese;
+            //deez buttons
+            if(response.nuts == "true") {
+                $(document.querySelector('#deeznuts')).prop("checked", true);
+                $(document.querySelector('#deeznutbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#deeznutbutton')).css('color', '#FFFFFF');
+            }
+            if(response.soy == "true") {
+                $(document.querySelector('#deezsoy')).prop("checked", true);
+                $(document.querySelector('#soybutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#soybutton')).css('color', '#FFFFFF');
+            }
+            if(response.egg == "true") {
+                $(document.querySelector('#deezeggs')).prop("checked", true);
+                $(document.querySelector('#eggbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#eggbutton')).css('color', '#FFFFFF');
+            }
+            if(response.gluten == "true") {
+                $(document.querySelector('#deezglutens')).prop("checked", true);
+                $(document.querySelector('#glutenbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#glutenbutton')).css('color', '#FFFFFF');
+            }
+            if(response.fish == "true") {
+                $(document.querySelector('#deezfish')).prop("checked", true);
+                $(document.querySelector('#fishbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#fishbutton')).css('color', '#FFFFFF');
+            }
+            if(response.milk == "true") {
+                $(document.querySelector('#deezmilk')).prop("checked", true);
+                $(document.querySelector('#milkbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#milkbutton')).css('color', '#FFFFFF');
+            }
+            if(response.other == "true") {
+                $(document.querySelector('#other')).prop("checked", true);
+                $(document.querySelector('#otherbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#otherbutton')).css('color', '#FFFFFF');
+            }
         },
 
         error: function(response)  {
@@ -305,7 +342,7 @@ function outputChinese(vol) {
 }
 
 function testFunction()  {
-    console.log("IT WORKS");
+    console.log("CELEBRATE SUCCESS RIGHT");
     console.log(document.querySelector('#chinese').value);
     $.ajax({
         url: '/set',
