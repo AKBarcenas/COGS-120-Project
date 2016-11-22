@@ -2,21 +2,20 @@ var data = require("../data/preferences.json");
 var fs = require("fs");
 
 exports.setPreference = function(req, res) {
-	var miles = req.query.miles;
-	var dollars = req.query.dollars;
-	var japanese = req.query.japanese;
-	var korean = req.query.korean;
-	var mexican = req.query.mexican;
-	var american = req.query.american;
-	var chinese = req.query.chinese;
-	
-	data.miles = miles;
-	data.dollars = dollars;
-	data.japanese = japanese;
-	data.korean = korean;
-	data.mexican = mexican;
-	data.american = american;
-	data.chinese = chinese;
+	data.miles = req.query.miles;
+	data.dollars = req.query.dollars;
+	data.japanese = req.query.japanese;
+	data.korean = req.query.korean;
+	data.mexican = req.query.mexican;
+	data.american = req.query.american;
+	data.chinese = req.query.chinese;
+	data.nuts = req.query.nuts;
+	data.soy = req.query.soy;
+	data.egg = req.query.egg;
+	data.gluten = req.query.gluten;
+	data.fish = req.query.fish;
+	data.milk = req.query.milk;
+	data.other = req.query.other;
 
 	console.log(data);
 
