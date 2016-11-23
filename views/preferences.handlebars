@@ -343,72 +343,84 @@ function outputChinese(vol) {
 
 function toggleNuts() {
     if($(document.querySelector('#deeznuts')).prop("checked"))  {
-        $(document.querySelector('#deeznuts')).prop("checked", false);
+        deactivate('#deeznuts', '#deeznutbutton');
     }
 
     else  {
-        $(document.querySelector('#deeznuts')).prop("checked", true);
+        activate('#deeznuts', '#deeznutbutton');
     }
 }
 
 function toggleSoy() {
     if($(document.querySelector('#deezsoy')).prop("checked"))  {
-        $(document.querySelector('#deezsoy')).prop("checked", false);
+        deactivate('#deezsoy', '#soybutton');
     }
 
     else  {
-        $(document.querySelector('#deezsoy')).prop("checked", true);
+        activate('#deezsoy', '#soybutton');
     }
 }
 
 function toggleEggs() {
     if($(document.querySelector('#deezeggs')).prop("checked"))  {
-        $(document.querySelector('#deezeggs')).prop("checked", false);
+        deactivate('#deezeggs', '#eggbutton');
     }
 
     else  {
-        $(document.querySelector('#deezeggs')).prop("checked", true);
+        activate('#deezeggs', '#eggbutton');
     }
 }
 
 function toggleGluten() {
     if($(document.querySelector('#deezglutens')).prop("checked"))  {
-        $(document.querySelector('#deezglutens')).prop("checked", false);
+        deactivate('#deezglutens', '#glutenbutton');
     }
 
     else  {
-        $(document.querySelector('#deezglutens')).prop("checked", true);
+        activate('#deezglutens', '#glutenbutton');
     }
 }
 
 function toggleFish() {
     if($(document.querySelector('#deezfish')).prop("checked"))  {
-        $(document.querySelector('#deezfish')).prop("checked", false);
+        deactivate('#deezfish', '#fishbutton');
     }
 
     else  {
-        $(document.querySelector('#deezfish')).prop("checked", true);
+        activate('#deezfish', '#fishbutton');
     }
 }
 
 function toggleMilk() {
     if($(document.querySelector('#deezmilk')).prop("checked"))  {
-        $(document.querySelector('#deezmilk')).prop("checked", false);
+        deactivate('#deezmilk', '#milkbutton');
     }
 
     else  {
-        $(document.querySelector('#deezmilk')).prop("checked", true);
+        activate('#deezmilk', '#milkbutton');
     }
 }
 
 function toggleOther() {
     if($(document.querySelector('#other')).prop("checked"))  {
-        $(document.querySelector('#other')).prop("checked", false);
+        deactivate('#other', '#otherbutton');
     }
 
     else  {
-        $(document.querySelector('#other')).prop("checked", true);
+        activate('#other', '#otherbutton');
     }
+}
+
+function activate(firstSelector, secondSelector)  {
+    $(document.querySelector(firstSelector)).prop("checked", true);
+    $(document.querySelector(secondSelector)).css('background-color', '#007ba7');
+    $(document.querySelector(secondSelector)).css('color', '#FFFFFF');
+}
+
+function deactivate(firstSelector, secondSelector)  {
+    $(document.querySelector(firstSelector)).prop("checked", false);
+    $(document.querySelector(secondSelector)).css('background-color', '#FFFFFF');
+    $(document.querySelector(secondSelector)).css('color', '#007ba7');
 }
 
 function testFunction()  {
