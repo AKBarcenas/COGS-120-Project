@@ -66,7 +66,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	
 	{{#if showAlternate}}
 	<center>
-    	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+    	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;" onclick="topSkip();">
     		SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
     	</a>
     </center>
@@ -234,7 +234,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   				SAVE and START CHATTING &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
 	</a>
 
-    <a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+    <a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;" onclick="bottomSkip();">SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
     </a>
     <!-- </form>  end form -->
 	
@@ -462,6 +462,16 @@ function testFunction()  {
             console.log(response1);
         }
     });
+}
+
+function bottomSkip()  {
+    console.log("BOTTOM SKIP BOI");
+    ga('send', 'event', 'button', 'click', 'Bottom Skip Clicked');
+}
+
+function topSkip()  {
+    console.log("TOP SKIP BOI");
+    ga('send', 'event', 'button', 'click', 'Top Skip Clicked');
 }
 
 </script>
