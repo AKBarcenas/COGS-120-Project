@@ -3,6 +3,21 @@
 
 <html>
 <head>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='133837019-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
     <title>Preferences | Food.AI</title>  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +66,7 @@
 	
 	{{#if showAlternate}}
 	<center>
-    	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">
+    	<a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;" onclick="topSkip();">
     		SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
     	</a>
     </center>
@@ -62,6 +77,7 @@
 	
 	
     <center class="animated fadeIn">
+
     <h1>GENERAL</h1>
 	<h2>How far are you willing to travel?</h2>
 	<label for="fader">Distance (mi): </label> 
@@ -78,15 +94,16 @@
 <h2>Got any allergies?</h2>
 	<!-- Taken from http://www.prepbootstrap.com/bootstrap-template/multi-select-buttons -->
   <div class="container">
+  <!-- deez buttons -->
     <div class="row">
         <div class="form-group">
             <div class="items-collection">
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="nuts" autocomplete="off" value="nuts">
+                            <label class="btn btn-default" id="deeznutbutton">
+                                <div class="itemcontent" onclick="toggleNuts();">
+                                    <input type="checkbox" id="deeznuts" name="nuts" autocomplete="off" value="nuts">
                                     <span class="fa fa-car fa-2x"></span>
                                     <h5>Peanuts/Nuts</h5>
                                 </div>
@@ -97,9 +114,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="soy" autocomplete="off" value="soy">
+                            <label class="btn btn-default" id="soybutton">
+                                <div class="itemcontent" onclick="toggleSoy();">
+                                    <input type="checkbox" id="deezsoy" name="soy" autocomplete="off" value="soy">
                                     <span class="fa fa-truck fa-2x"></span>
                                     <h5>Soy</h5>
                                 </div>
@@ -110,9 +127,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="soy" autocomplete="off" value="soy">
+                            <label class="btn btn-default" id="eggbutton">
+                                <div class="itemcontent" onclick="toggleEggs();">
+                                    <input type="checkbox" id="deezeggs" name="egg" autocomplete="off" value="egg">
                                     <span class="fa fa-truck fa-2x"></span>
                                     <h5>Egg</h5>
                                 </div>
@@ -124,9 +141,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="gluten" autocomplete="off" value="gluten">
+                            <label class="btn btn-default" id="glutenbutton">
+                                <div class="itemcontent" onclick="toggleGluten();">
+                                    <input type="checkbox" id="deezglutens" name="gluten" autocomplete="off" value="gluten">
                                     <span class="fa fa-laptop fa-2x"></span>
                                     <h5>Gluten</h5>
                                 </div>
@@ -137,9 +154,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="fish" autocomplete="off" value="fish">
+                            <label class="btn btn-default" id="fishbutton">
+                                <div class="itemcontent" onclick="toggleFish();">
+                                    <input type="checkbox" id="deezfish" name="fish" autocomplete="off" value="fish">
                                     <span class="fa fa-cube fa-2x"></span>
                                     <h5>Fish/Shellfish</h5>
                                 </div>
@@ -150,9 +167,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="milk" autocomplete="off" value="milk">
+                            <label class="btn btn-default" id="milkbutton">
+                                <div class="itemcontent" onclick="toggleMilk();">
+                                    <input type="checkbox" id="deezmilk" name="milk" autocomplete="off" value="milk">
                                     <span class="fa fa-lock fa-2x"></span>
                                     <h5>Milk</h5>
                                 </div>
@@ -163,9 +180,9 @@
                 <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="info-block block-info clearfix">
                         <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-default">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="other" autocomplete="off" value="other">
+                            <label class="btn btn-default" id="otherbutton">
+                                <div class="itemcontent" onclick="toggleOther();">
+                                    <input type="checkbox" id="other" name="other" autocomplete="off" value="other">
                                     <span class="fa fa-barcode fa-2x"></span>
                                     <h5>Other</h5>
                                 </div>
@@ -219,7 +236,7 @@
   				SAVE and START CHATTING &nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> 
 	</a>
 
-    <a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;">SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+    <a href="/chat/" type="button" class="btn btn-default btn-lg animated fadeInUp" style="margin-top: 15px;" onclick="bottomSkip();">SKIP FOR NOW <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
     </a>
     <!-- </form>  end form -->
 	
@@ -242,6 +259,42 @@ $( document ).ready(function() {
             document.querySelector('#mexican').value = response.mexican;
             document.querySelector('#american').value = response.american;
             document.querySelector('#chinese').value = response.chinese;
+            //deez buttons
+            if(response.nuts == "true") {
+                $(document.querySelector('#deeznuts')).prop("checked", true);
+                $(document.querySelector('#deeznutbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#deeznutbutton')).css('color', '#FFFFFF');
+            }
+            if(response.soy == "true") {
+                $(document.querySelector('#deezsoy')).prop("checked", true);
+                $(document.querySelector('#soybutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#soybutton')).css('color', '#FFFFFF');
+            }
+            if(response.egg == "true") {
+                $(document.querySelector('#deezeggs')).prop("checked", true);
+                $(document.querySelector('#eggbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#eggbutton')).css('color', '#FFFFFF');
+            }
+            if(response.gluten == "true") {
+                $(document.querySelector('#deezglutens')).prop("checked", true);
+                $(document.querySelector('#glutenbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#glutenbutton')).css('color', '#FFFFFF');
+            }
+            if(response.fish == "true") {
+                $(document.querySelector('#deezfish')).prop("checked", true);
+                $(document.querySelector('#fishbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#fishbutton')).css('color', '#FFFFFF');
+            }
+            if(response.milk == "true") {
+                $(document.querySelector('#deezmilk')).prop("checked", true);
+                $(document.querySelector('#milkbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#milkbutton')).css('color', '#FFFFFF');
+            }
+            if(response.other == "true") {
+                $(document.querySelector('#other')).prop("checked", true);
+                $(document.querySelector('#otherbutton')).css('background-color', '#007ba7');
+                $(document.querySelector('#otherbutton')).css('color', '#FFFFFF');
+            }
         },
 
         error: function(response)  {
@@ -304,8 +357,90 @@ function outputChinese(vol) {
     document.querySelector('#chinese').value = vol;
 }
 
+function toggleNuts() {
+    if($(document.querySelector('#deeznuts')).prop("checked"))  {
+        deactivate('#deeznuts', '#deeznutbutton');
+    }
+
+    else  {
+        activate('#deeznuts', '#deeznutbutton');
+    }
+}
+
+function toggleSoy() {
+    if($(document.querySelector('#deezsoy')).prop("checked"))  {
+        deactivate('#deezsoy', '#soybutton');
+    }
+
+    else  {
+        activate('#deezsoy', '#soybutton');
+    }
+}
+
+function toggleEggs() {
+    if($(document.querySelector('#deezeggs')).prop("checked"))  {
+        deactivate('#deezeggs', '#eggbutton');
+    }
+
+    else  {
+        activate('#deezeggs', '#eggbutton');
+    }
+}
+
+function toggleGluten() {
+    if($(document.querySelector('#deezglutens')).prop("checked"))  {
+        deactivate('#deezglutens', '#glutenbutton');
+    }
+
+    else  {
+        activate('#deezglutens', '#glutenbutton');
+    }
+}
+
+function toggleFish() {
+    if($(document.querySelector('#deezfish')).prop("checked"))  {
+        deactivate('#deezfish', '#fishbutton');
+    }
+
+    else  {
+        activate('#deezfish', '#fishbutton');
+    }
+}
+
+function toggleMilk() {
+    if($(document.querySelector('#deezmilk')).prop("checked"))  {
+        deactivate('#deezmilk', '#milkbutton');
+    }
+
+    else  {
+        activate('#deezmilk', '#milkbutton');
+    }
+}
+
+function toggleOther() {
+    if($(document.querySelector('#other')).prop("checked"))  {
+        deactivate('#other', '#otherbutton');
+    }
+
+    else  {
+        activate('#other', '#otherbutton');
+    }
+}
+
+function activate(firstSelector, secondSelector)  {
+    $(document.querySelector(firstSelector)).prop("checked", true);
+    $(document.querySelector(secondSelector)).css('background-color', '#007ba7');
+    $(document.querySelector(secondSelector)).css('color', '#FFFFFF');
+}
+
+function deactivate(firstSelector, secondSelector)  {
+    $(document.querySelector(firstSelector)).prop("checked", false);
+    $(document.querySelector(secondSelector)).css('background-color', '#FFFFFF');
+    $(document.querySelector(secondSelector)).css('color', '#007ba7');
+}
+
 function testFunction()  {
-    console.log("IT WORKS");
+    console.log("CELEBRATE SUCCESS RIGHT");
     console.log(document.querySelector('#chinese').value);
     $.ajax({
         url: '/set',
@@ -316,12 +451,29 @@ function testFunction()  {
             'korean': document.querySelector('#korean').value,
             'mexican': document.querySelector('#mexican').value,
             'american': document.querySelector('#american').value,
-            'chinese': document.querySelector('#chinese').value
+            'chinese': document.querySelector('#chinese').value,
+            'nuts': $(document.querySelector('#deeznuts')).prop("checked"),
+            'soy': $(document.querySelector('#deezsoy')).prop("checked"),
+            'egg': $(document.querySelector('#deezeggs')).prop("checked"),
+            'gluten': $(document.querySelector('#deezglutens')).prop("checked"),
+            'fish': $(document.querySelector('#deezfish')).prop("checked"),
+            'milk': $(document.querySelector('#deezmilk')).prop("checked"),
+            'other': $(document.querySelector('#other')).prop("checked")
         },
         success: function(response1) {
             console.log(response1);
         }
     });
+}
+
+function bottomSkip()  {
+    console.log("BOTTOM SKIP BOI");
+    ga('send', 'event', 'button', 'click', 'Bottom Skip Clicked');
+}
+
+function topSkip()  {
+    console.log("TOP SKIP BOI");
+    ga('send', 'event', 'button', 'click', 'Top Skip Clicked');
 }
 
 </script>

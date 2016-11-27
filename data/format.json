@@ -79,6 +79,11 @@
 			"placeName": "Tajima",
 			"description": "Ramen, Japanese",
 			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"placeName": "Ramen Yamadaya",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4706 Clairemont Mesa Blvd, San Diego, CA 92117"      
 		}
 	],
 	"steak": [
@@ -86,6 +91,11 @@
 			"placeName": "Fleming's Prime Steakhouse & Wine Bar",
 			"description": "Steak, American",
 			"placeAddress": "8970 University Center Ln, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Donovan's Steak & Chop House",
+			"description": "Steak, American",
+			"placeAddress": "1250 Prospect St, La Jolla, CA 92037"
 		}
 	],
 	"american": [
@@ -93,6 +103,11 @@
 			"placeName": "Fleming's Prime Steakhouse & Wine Bar",
 			"description": "Steak, American",
 			"placeAddress": "8970 University Center Ln, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Donovan's Steak & Chop House",
+			"description": "Steak, American",
+			"placeAddress": "1250 Prospect St, La Jolla, CA 92037"
 		}
 	],
 	"italian": [
@@ -100,6 +115,11 @@
 			"placeName": "Bella Vista Social Club & Caffe",
 			"description": "Italian",
 			"placeAddress": "2880 Torrey Pines Scenic Dr, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Lorna's Italian Kitchen",
+			"description": "Pasta",
+			"placeAddress": "3945 Governor Dr, San Diego, CA 92122"
 		}
 	],
 	"thai": [
@@ -107,6 +127,11 @@
 			"placeName": "Star Anise Thai Cuisine",
 			"description": "Thai",
 			"placeAddress": "8935 Towne Centre Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Di-Chan Thai Restaurant",
+			"description": "Thai",
+			"placeAddress": "5535 Clairemont Mesa Blvd, San Diego, CA 92117"
 		}
 	],
 	"mediterranean": [
@@ -114,6 +139,11 @@
 			"placeName": "Almaz Restaurant",
 			"description": "Mediterranean",
 			"placeAddress": "10920 Roselle St, San Diego, CA 92121"
+		},
+		{
+			"placeName": "Aladdin",
+			"description": "Mediterranean",
+			"placeAddress": "5420 Clairemont Mesa Blvd, San Diego, CA 92117"
 		}
 	],
 	"korean": [
@@ -121,6 +151,11 @@
 			"placeName": "Taegukgi Korean BBQ",
 			"description": "Korean",
 			"placeAddress": "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Mapo BBQ Korean Cuisine",
+			"description": "Korean",
+			"placeAddress": "4647 Convoy St #104, San Diego, CA 92111"
 		}
 	],
 	"spanish": [
@@ -128,6 +163,126 @@
 			"placeName": "Costa Brava",
 			"description": "Spanish",
 			"placeAddress": "1653 Garnet Ave, San Diego, CA 92109"
+		},
+		{
+			"placeName": "Cafe Sevilla of San Diego",
+			"description": "Spanish",
+			"placeAddress": "353 Fifth Ave, San Diego, CA 92101"
+		}
+	],
+	"pasta": [
+		{
+			"placeName": "Leucadia",
+			"description": "Pasta",
+			"placeAddress": "7748 Regents Rd #303, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Lorna's Italian Kitchen",
+			"description": "Pasta",
+			"placeAddress": "3945 Governor Dr, San Diego, CA 92122"
+		}
+	],
+	"ribs": [
+		{
+			"placeName": "Lightnin Jack's BBQ",
+			"description": "Ribs",
+			"placeAddress": "Clairemont Town Square, 4705 Clairemont Dr H, San Diego, CA 92117"
+		},
+		{
+			"placeName": "Bubba's Smokehouse BBQ",
+			"description": "Ribs",
+			"placeAddress": "888 Prospect St, La Jolla, CA 92037"
+		}
+	],
+	"pizza": [
+		{
+			"placeName": "Regents Pizzeria",
+			"description": "Pizza",
+			"placeAddress": "Regents Marketplace, 4150 Regents Park Row #100, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Leucadia Pizzeria & Italian Restaurant",
+			"description": "Pizza",
+			"placeAddress": "7748 Regents Rd #303, San Diego, CA 92122"
+		}
+	],
+	"salad": [
+		{
+			"placeName": "Tender Greens",
+			"description": "Salads",
+			"placeAddress": "Westfield UTC, 4545 La Jolla Village Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Greenspot Salad",
+			"description": "Salads",
+			"placeAddress": "Sorrento Towers, 9450 Scranton Rd, San Diego, CA 92121"
+		}
+	],
+	"burrito": [
+		{
+			"placeName": "Los Primos Mexican Food",
+			"description": "Burritos",
+			"placeAddress": "7770 Regents Rd #109, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Chipotle Mexican Grill",
+			"description": "Burritos",
+			"placeAddress": "Costa Verde Center, 8750 Genesee Ave #240, San Diego, CA 92122"
+		}
+	],
+	"burger": [
+		{
+			"placeName": "Five Guys",
+			"description": "Burgers",
+			"placeAddress": "Costa Verde Center, 8650 Genesee Ave, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Red Robin",
+			"description": "Burgers",
+			"placeAddress": "Westfield UTC, 4373 La Jolla Village Drive, San Diego, CA 92122"
+		}
+	],
+	"curry": [
+		{
+			"placeName": "Royal India Express",
+			"description": "Curry",
+			"placeAddress": "Westfield UTC, 4545 La Jolla Village Dr e, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Punjabi Tandoor",
+			"description": "Curry",
+			"placeAddress": "5424 Morehouse Dr, San Diego, CA 92121"
+		}
+	],
+	"fries": [
+		{
+			"placeName": "Five Guys",
+			"description": "Fries",
+			"placeAddress": "Costa Verde Center, 8650 Genesee Ave, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Red Robin",
+			"description": "Fries",
+			"placeAddress": "Westfield UTC, 4373 La Jolla Village Drive, San Diego, CA 92122"
+		}
+	],
+	"nachos": [
+		{
+			"placeName": "Fins Mexican Eatery",
+			"description": "Nachos",
+			"placeAddress": "La Jolla Village Square, 8657 Villa La Jolla Dr, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Nachos Taco Shop",
+			"description": "Nachos",
+			"placeAddress": "7589 University Ave, La Mesa, CA 91942"
+		}
+	],
+	"jimmy": [
+		{
+			"placeName": "Jimmy's House",
+			"description": "asdfjkl",
+			"placeAddress": "Just s*** on them"
 		}
 	],
 	"food": [
