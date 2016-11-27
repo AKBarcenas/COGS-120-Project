@@ -1,15 +1,40 @@
 {
 	"japanese": [
 		{
-			"placeName": "Tajima",
+			"placeName": "Tajima - Convoy",
 			"description": "Ramen, Japanese",
 			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
 		},
 		{
 			"placeName": "Sushi Ota",
 			"description": "Sushi, Japanese",
-			"placeAddress": "4529 Mission bay Dr, San Diego, CA 92109"     
-		} 
+			"placeAddress": "4529 Mission Bay Dr, San Diego, CA 92109"     
+		},
+		{
+			"placeName": "Rakiraki Ramen & Tsukemen",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4646 Convoy St #102-A, San Diego, CA 92111"     
+		}, 
+		{
+			"placeName": "Ichiro's",
+			"description": "Sushi, Japanese",
+			"placeAddress": "4344 Convoy St Q, San Diego, CA 92111"     
+		},
+		{
+			"placeName": "Niban Japanese Restaurant",
+			"description": "Sushi, Japanese",
+			"placeAddress": "7081 Clairemont Mesa Blvd #101, San Diego, CA 92111"     
+		},
+		{	
+			"placeName": "Kula Revolving Sushi Bar",
+			"description": "Sushi, Japanese",
+			"placeAddress": "4609 Convoy St #F, San Diego, CA 92111"     
+		},
+{	
+			"placeName": "Cafe Japengo",
+			"description": "Sushi, Japanese",
+			"placeAddress": "8960 University Center Ln, San Diego, CA 92122"     
+		} 			
 	],
 	"chinese": [
 		{
@@ -21,7 +46,37 @@
 			"placeName": "Mandarin House",
 			"description": "Restaurant, Chinese",
 			"placeAddress": "6765 La Jolla Blvd, La Jolla, CA 92037"     
-		} 
+		}, 
+		{
+			"placeName": "Dumpling Inn & Shanghai Saloon",
+			"description": "Restaurant, Chinese",
+			"placeAddress": "4625 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"placeName": "Spicy City",
+			"description": "Restaurant, Chinese",
+			"placeAddress": "4690 Convoy St #107, San Diego, CA 92111"      
+		},
+		{
+			"placeName": "P.F. Chang's",
+			"description": "Restaurant, Chinese",
+			"placeAddress": "4540 La Jolla Village Dr, San Diego, CA 92122"      
+		},
+		{
+			"placeName": "Shan Xi Magic Kitchen",
+			"description": "Restaurant, Chinese",
+			"placeAddress": "4344 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"placeName": "Gourmet City",
+			"description": "Restaurant, Chinese",
+			"placeAddress": "5541 Clairemont Mesa Blvd, San Diego, CA 92117"      
+		},
+		{
+			"placeName": "Chef Chin",
+			"description": "Restaurant, Chinese",
+			"placeAddress": "11828 Rancho Bernardo Rd, San Diego, CA 92128-1912"      
+		}		
 	],
 	"seafood": [
 		{
@@ -38,7 +93,42 @@
 			"placeName": "Truluck's",
 			"description": "Seafood",
 			"placeAddress": "8990 University Center Ln, San Diego, CA 92122"
-		} 
+		},
+		{
+			"placeName": "Truluck's Seafood Steak and Crab",
+			"description": "Fish, Seafood",
+			"placeAddress": "8990 University Center Lane, San Diego, CA 92122"     
+		},
+		{
+			"placeName": "Cody's",
+			"description": "Fish, Seafood",
+			"placeAddress": "8030 Girard Ave., La Jolla, San Diego, CA 92037"     
+		},
+		{
+			"placeName": "Duke's La Jolla",
+			"description": "Fish, Seafood",
+			"placeAddress": "1216 Prospect St, La Jolla, San Diego, CA 92037"     
+		},
+		{
+			"placeName": "Crab Catcher",
+			"description": "Fish, Seafood",
+			"placeAddress": "1298 Prospect St, La Jolla, San Diego, CA 92037"     
+		},
+		{
+			"placeName": "The Shores Restaurant",
+			"description": "American, Seafood",
+			"placeAddress": "8110 Camino Del Oro, La Jolla, San Diego, CA 92037"     
+		},
+		{
+			"placeName": "Mister Fish & Chips",
+			"description": "Seafood",
+			"placeAddress": "5647 Balboa Ave, La Jolla, San Diego, CA 92111"     
+		},
+		{
+			"placeName": "George's at the Cove",
+			"description": "America, Seafood, Soups",
+			"placeAddress": "1250 Prospect Street #110, La Jolla, CA 92037"     
+		}
 	],
 	"mexican": [
 		{
@@ -55,7 +145,27 @@
 			"placeName": "Vallartas",
 			"description": "Tacos, Burritos, Mexican",
 			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
-		} 
+		},
+		{
+			"placeName": "Lena Craft Mexican",
+			"description": "Mexican",
+			"placeAddress": "909 Prospect Street #290, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "The Taco Stand",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "621 Pearl St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Puesto Mexican Street Food",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "1026 Wall St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Don Carlos Taco Shop",
+			"description": "Mexican",
+			"placeAddress": "737 Pearl St, Ste 113, La Jolla, San Diego, CA 92037"
+		}
 	],
 	"taco": [
 		{
@@ -72,7 +182,22 @@
 			"placeName": "Vallartas",
 			"description": "Tacos, Burritos, Mexican",
 			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
-		} 
+		},
+		{
+			"placeName": "The Taco Stand",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "621 Pearl St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Puesto Mexican Street Food",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "1026 Wall St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Don Carlos Taco Shop",
+			"description": "Mexican",
+			"placeAddress": "737 Pearl St, Ste 113, La Jolla, San Diego, CA 92037"
+		}
 	],
 	"ramen": [
 		{
@@ -84,6 +209,26 @@
 			"placeName": "Ramen Yamadaya",
 			"description": "Ramen, Japanese",
 			"placeAddress": "4706 Clairemont Mesa Blvd, San Diego, CA 92117"      
+		},
+		{
+			"placeName": "Rakiraki Ramen & Tsukemen",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4646 Convoy St #102-A, San Diego, CA 92111"     
+		},
+		{
+			"placeName": "Santouka Ramen",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4240 Kearny Mesa Rd, La Jolla, San Diego, CA 92111"     
+		},
+		{
+			"placeName": "Yakitori Yakyudori and Ramen",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4898 Convoy St, Ste 101, San Diego, CA 92111"     
+		},
+		{
+			"placeName": "Nishiki Ramen",
+			"description": "Ramen, Japanese",
+			"placeAddress": "8055 Armour St, #201A, San Diego, CA 92111"     
 		}
 	],
 	"steak": [
@@ -96,6 +241,36 @@
 			"placeName": "Donovan's Steak & Chop House",
 			"description": "Steak, American",
 			"placeAddress": "1250 Prospect St, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Greystone Prime SteakHouse & Seafood",
+			"description": "Steak, American",
+			"placeAddress": "658 5th Ave, San Diego, CA 92101"
+		},
+		{
+			"placeName": "Greystone Prime SteakHouse & Seafood",
+			"description": "Steak, American",
+			"placeAddress": "658 5th Ave, San Diego, CA 92101"
+		},
+		{
+			"placeName": "Humphreys Restaurant",
+			"description": "Steak, American",
+			"placeAddress": "2241 Shelter Island Dr, San Diego, CA 92106"
+		},
+		{
+			"placeName": "Bernini's Bistro",
+			"description": "Steak, American",
+			"placeAddress": "7550 Fay Ave, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Hunter Steakhouse",
+			"description": "Steak, American",
+			"placeAddress": "2445 Hotel Cir Pl, San Diego, CA 92108"
+		},
+		{
+			"placeName": "Outback Steakhouse",
+			"description": "Steak, American",
+			"placeAddress": "1640 Camino Del Rio N #125, San Diego, CA 92108"
 		}
 	],
 	"american": [
@@ -108,6 +283,41 @@
 			"placeName": "Donovan's Steak & Chop House",
 			"description": "Steak, American",
 			"placeAddress": "1250 Prospect St, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Eureka!",
+			"description": "American",
+			"placeAddress": "4353 La Jolla Village Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "The Spot",
+			"description": "American",
+			"placeAddress": "1005 Prospect St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Caroline's Seaside Cafe",
+			"description": "American",
+			"placeAddress": "8610 Kennel Way, La Jolla, San Diego, CA"
+		},
+		{
+			"placeName": "George's at the Cove",
+			"description": "American",
+			"placeAddress": "1250 Prospect Street #110, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Karl Strauss Brewing Company",
+			"description": "American",
+			"placeAddress": "1044 Wall St Ste C, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Brockton Villa Restaurant",
+			"description": "American",
+			"placeAddress": "1235 Coast Blvd, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Whisknladle",
+			"description": "American",
+			"placeAddress": "1044 Wall Street, La Jolla, San Diego, CA 92037"
 		}
 	],
 	"italian": [
@@ -120,6 +330,46 @@
 			"placeName": "Lorna's Italian Kitchen",
 			"description": "Pasta",
 			"placeAddress": "3945 Governor Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Piatti - La Jolla",
+			"description": "Pasta",
+			"placeAddress": "2182 Avenida De La Playa, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Osteria Romantica",
+			"description": "Pasta",
+			"placeAddress": "2151 Avenida De La Playa, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Catania",
+			"description": "Pasta",
+			"placeAddress": "7863 Girard Avenue #301, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Stella Italian",
+			"description": "Pasta",
+			"placeAddress": "8008 Girard Avenue #220, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Cafe Milano",
+			"description": "Pasta",
+			"placeAddress": "711 Pearl St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "La Dolce Vita",
+			"description": "Pasta",
+			"placeAddress": "1237 Prospect St Ste P, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Sammy's Woodfired Pizza & Grill",
+			"description": "Pasta",
+			"placeAddress": "702 Pearl Street #D, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Carino's Italian",
+			"description": "Pasta",
+			"placeAddress": "7408 La Jolla Blvd, La Jolla, San Diego, CA 92037"
 		}
 	],
 	"thai": [
@@ -132,6 +382,26 @@
 			"placeName": "Di-Chan Thai Restaurant",
 			"description": "Thai",
 			"placeAddress": "5535 Clairemont Mesa Blvd, San Diego, CA 92117"
+		},
+		{
+			"placeName": "Spice & Rice Thai Kitchen",
+			"description": "Thai",
+			"placeAddress": "7734 Girard Ave, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Aroi",
+			"description": "Thai",
+			"placeAddress": "7523 Fay Ave Unit A/B, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Bangkok Spices Thai Restaurant",
+			"description": "Thai",
+			"placeAddress": "3755 Murphy Canyon Rd, Ste J, La Jolla, San Diego, CA 92123"
+		},
+		{
+			"placeName": "Thai Island",
+			"description": "Thai",
+			"placeAddress": "1134 7th Ave, La Jolla, San Diego, CA 92101"
 		}
 	],
 	"mediterranean": [
@@ -264,7 +534,12 @@
 			"placeName": "Red Robin",
 			"description": "Fries",
 			"placeAddress": "Westfield UTC, 4373 La Jolla Village Drive, San Diego, CA 92122"
-		}
+		},
+		{
+			"placeName": "Vallartas",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
+		} 
 	],
 	"nachos": [
 		{
@@ -276,13 +551,18 @@
 			"placeName": "Nachos Taco Shop",
 			"description": "Nachos",
 			"placeAddress": "7589 University Ave, La Mesa, CA 91942"
-		}
+		},
+		{
+			"placeName": "Vallartas",
+			"description": "Tacos, Burritos, Mexican",
+			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
+		} 
 	],
 	"jimmy": [
 		{
 			"placeName": "Jimmy's House",
 			"description": "asdfjkl",
-			"placeAddress": "Just s*** on them"
+			"placeAddress": "Make sure they get #rekt"
 		}
 	],
 	"food": [
