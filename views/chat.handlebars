@@ -8,8 +8,8 @@
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-<link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'/ >
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'/ >
   </head>
   <body>
   
@@ -151,31 +151,9 @@
                     directionsAsked = true;
                   }
 
-/*<<<<<<< HEAD
-                  if(placeName != "NULL")  {
-                  	var randomMessage = Math.random();
-                  	if (randomMessage <= 0.333) {
-                    	message = "You should go to a place called " + placeName + " located at " + placeAddress + ". Would you like directions to this place? You can also tell me another type of food that you want.";
-                    	foodSearched = true;
-                    	directionsAsked = false;
-                    }
-                    else if (randomMessage <= 0.666) {
-                    	message = "Yo, check out " + placeName + " located at " + placeAddress + ". You want directions? Or you want another type of food?";
-                    	foodSearched = true;
-                    	directionsAsked = false;
-                  	}
-                  	else {
-                  		message = "It's lit fam. Go to " + placeName + " located at " + placeAddress + ". I can hit you up with directions or another type of food.";
-                    	foodSearched = true;
-                    	directionsAsked = false;    		
-                  	}
-                  }
-                  else  {
-                    message = "I can't find a place for the type of food you asked for. Tell me another type of food that you want.";
-=======*/
+
                   else if(foodSearched == true) {
 
-//>>>>>>> Cleanup
                     foodSearched = false;
                     if((containsAcceptance || containsFavorites || containsAddition) && !containsRejection)  {
                       message = "I will add this to your favorites now. Tell me if there is anything else that you would like to eat.";
@@ -204,10 +182,7 @@
                     foodSearched = false;
                   }
                   
-                  $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');
-				  
-					
-                  /*$('#messages').append($('<li class="animated fadeInUp">' + '<a href="http://www.w3schools.com/html/">') + message + $('</a></li>'));*/
+                  $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');				  
                 }
             }
           });
