@@ -468,11 +468,13 @@ function testFunction()  {
 
 function bottomSkip()  {
     console.log("BOTTOM SKIP BOI");
-    ga('send', 'event', 'button', 'click', 'Bottom Skip Clicked');
+    ga('send', 'event', 'bottomSkip', 'click', 'Bottom Skip Clicked');
+	ga('send', 'event', 'button', 'click', 'Bottom Skip Clicked');
 }
 
 function topSkip()  {
     console.log("TOP SKIP BOI");
+	ga('send', 'event', 'topSkip', 'click', 'Top Skip Clicked');
     ga('send', 'event', 'button', 'click', 'Top Skip Clicked');
 }
 
@@ -490,7 +492,6 @@ function topSkip()  {
 
   ga('create', 'UA-87473717-1', 'auto');
   ga('send', 'pageview');
-  ga('send', 'event', 'topSkip', 'click');
 
 </script>
   </body>
