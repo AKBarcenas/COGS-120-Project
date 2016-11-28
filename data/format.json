@@ -411,10 +411,21 @@
 			"placeAddress": "10920 Roselle St, San Diego, CA 92121"
 		},
 		{
-			"placeName": "Aladdin",
+			"placeName": "Aladdin Mediterranean Cafe",
 			"description": "Mediterranean",
 			"placeAddress": "5420 Clairemont Mesa Blvd, San Diego, CA 92117"
+		},
+		{
+			"placeName": "Grill House Cafe",
+			"description": "Mediterranean",
+			"placeAddress": "9494 Black Mountain Rd,, San Diego, CA 92126"
+		},
+		{
+			"placeName": "The Med",
+			"description": "Mediterranean",
+			"placeAddress": "1132 Prospect Street, La Jolla, CA 92037"
 		}
+		
 	],
 	"korean": [
 		{
