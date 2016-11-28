@@ -424,6 +424,16 @@
 			"placeName": "The Med",
 			"description": "Mediterranean",
 			"placeAddress": "1132 Prospect Street, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Trilogy Sanctuary",
+			"description": "Mediterranean",
+			"placeAddress": "7650 Girard Ave, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Daphne's California Greek",
+			"description": "Mediterranean",
+			"placeAddress": "8657 Villa La Jolla Drive #105, La Jolla, CA 92037"
 		}
 		
 	],
@@ -437,7 +447,38 @@
 			"placeName": "Mapo BBQ Korean Cuisine",
 			"description": "Korean",
 			"placeAddress": "4647 Convoy St #104, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Little Korea",
+			"description": "Korean",
+			"placeAddress": "8008 Girard Avenue #210, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Grandma Tofu and Korean BBQ",
+			"description": "Korean",
+			"placeAddress": "4425 Convoy St Ste 217, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Manna Korean BBQ",
+			"description": "Korean",
+			"placeAddress": "4428 Convoy St, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Dae Jang Keum",
+			"description": "Korean",
+			"placeAddress": "7905 Engineer Rd, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Do Re Mi House",
+			"description": "Korean",
+			"placeAddress": "8199 Clairemont Mesa Boulevard #M, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Tofu House",
+			"description": "Korean",
+			"placeAddress": "4229 Convoy St, San Diego, CA 92111"
 		}
+		
 	],
 	"spanish": [
 		{
@@ -461,6 +502,41 @@
 			"placeName": "Lorna's Italian Kitchen",
 			"description": "Pasta",
 			"placeAddress": "3945 Governor Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Osteria Romantica",
+			"description": "Pasta",
+			"placeAddress": "2151 Avenida De La Playa, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Catania",
+			"description": "Pasta",
+			"placeAddress": "7863 Girard Avenue #301, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Stella Italian",
+			"description": "Pasta",
+			"placeAddress": "8008 Girard Avenue #220, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Cafe Milano",
+			"description": "Pasta",
+			"placeAddress": "711 Pearl St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "La Dolce Vita",
+			"description": "Pasta",
+			"placeAddress": "1237 Prospect St Ste P, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Sammy's Woodfired Pizza & Grill",
+			"description": "Pasta",
+			"placeAddress": "702 Pearl Street #D, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Carino's Italian",
+			"description": "Pasta",
+			"placeAddress": "7408 La Jolla Blvd, La Jolla, San Diego, CA 92037"
 		}
 	],
 	"ribs": [
@@ -485,6 +561,21 @@
 			"placeName": "Leucadia Pizzeria & Italian Restaurant",
 			"description": "Pizza",
 			"placeAddress": "7748 Regents Rd #303, San Diego, CA 92122"
+		},
+		{
+			"placeName": "California Pizza Kitchen",
+			"description": "Pizza",
+			"placeAddress": "3363 Nobel Dr, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Sammy's Woodfired Pizza & Grill",
+			"description": "Pizza",
+			"placeAddress": "702 Pearl Street #D, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Carino's Italian",
+			"description": "Pizza",
+			"placeAddress": "7408 La Jolla Blvd, La Jolla, San Diego, CA 92037"
 		}
 	],
 	"salad": [
@@ -521,6 +612,31 @@
 			"placeName": "Red Robin",
 			"description": "Burgers",
 			"placeAddress": "Westfield UTC, 4373 La Jolla Village Drive, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Draft Republic",
+			"description": "Burgers",
+			"placeAddress": "4282 Esplanade Ct, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Jeff's Burgers",
+			"description": "Burgers",
+			"placeAddress": "2152 Avenida De La Playa, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Smashburger",
+			"description": "Burgers",
+			"placeAddress": "1000 Prospect St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Burger Lounge",
+			"description": "Burgers",
+			"placeAddress": "1101 Wall Street, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Woody's Burgers San Diego",
+			"description": "Burgers",
+			"placeAddress": "7070 Miramar Rd, La Jolla, San Diego, CA 92121"
 		}
 	],
 	"curry": [
@@ -533,23 +649,53 @@
 			"placeName": "Punjabi Tandoor",
 			"description": "Curry",
 			"placeAddress": "5424 Morehouse Dr, San Diego, CA 92121"
+		},
+		{
+			"placeName": "Tandoori Chef",
+			"description": "Curry",
+			"placeAddress": "613 Pearl St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "India Palace",
+			"description": "Curry",
+			"placeAddress": "694 University Avenue, La Jolla, San Diego, CA 92103"
 		}
 	],
 	"fries": [
 		{
 			"placeName": "Five Guys",
-			"description": "Fries",
+			"description": "Burgers",
 			"placeAddress": "Costa Verde Center, 8650 Genesee Ave, San Diego, CA 92122"
 		},
 		{
 			"placeName": "Red Robin",
-			"description": "Fries",
+			"description": "Burgers",
 			"placeAddress": "Westfield UTC, 4373 La Jolla Village Drive, San Diego, CA 92122"
 		},
 		{
-			"placeName": "Vallartas",
-			"description": "Tacos, Burritos, Mexican",
-			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
+			"placeName": "Draft Republic",
+			"description": "Burgers",
+			"placeAddress": "4282 Esplanade Ct, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Jeff's Burgers",
+			"description": "Burgers",
+			"placeAddress": "2152 Avenida De La Playa, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Smashburger",
+			"description": "Burgers",
+			"placeAddress": "1000 Prospect St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Burger Lounge",
+			"description": "Burgers",
+			"placeAddress": "1101 Wall Street, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Woody's Burgers San Diego",
+			"description": "Burgers",
+			"placeAddress": "7070 Miramar Rd, La Jolla, San Diego, CA 92121"
 		} 
 	],
 	"nachos": [
@@ -601,6 +747,141 @@
 			"placeName": "Vallartas",
 			"description": "Tacos, Burritos, Mexican",
 			"placeAddress": "4277 Genesee Ave, San Diego, CA 92117"
-		} 
+		},
+		{
+			"placeName": "Tajima - Convoy",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4681 Convoy St, San Diego, CA 92111"      
+		},
+		{
+			"placeName": "Sushi Ota",
+			"description": "Sushi, Japanese",
+			"placeAddress": "4529 Mission Bay Dr, San Diego, CA 92109"     
+		},
+		{
+			"placeName": "Rakiraki Ramen & Tsukemen",
+			"description": "Ramen, Japanese",
+			"placeAddress": "4646 Convoy St #102-A, San Diego, CA 92111"     
+		}, 
+		{
+			"placeName": "Ichiro's",
+			"description": "Sushi, Japanese",
+			"placeAddress": "4344 Convoy St #Q, San Diego, CA 92111"     
+		},
+		{
+			"placeName": "Niban Japanese Restaurant",
+			"description": "Sushi, Japanese",
+			"placeAddress": "7081 Clairemont Mesa Blvd #101, San Diego, CA 92111"     
+		},
+		{	
+			"placeName": "Kula Revolving Sushi Bar",
+			"description": "Sushi, Japanese",
+			"placeAddress": "4609 Convoy St #F, San Diego, CA 92111"     
+		},
+		{	
+			"placeName": "Cafe Japengo",
+			"description": "Sushi, Japanese",
+			"placeAddress": "8960 University Center Ln, San Diego, CA 92122"     
+		},
+		{
+			"placeName": "Taegukgi Korean BBQ",
+			"description": "Korean",
+			"placeAddress": "7655 Clairemont Mesa Blvd #501, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Mapo BBQ Korean Cuisine",
+			"description": "Korean",
+			"placeAddress": "4647 Convoy St #104, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Little Korea",
+			"description": "Korean",
+			"placeAddress": "8008 Girard Ave #210, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Grandma Tofu and Korean BBQ",
+			"description": "Korean",
+			"placeAddress": "4425 Convoy St Ste 217, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Manna Korean BBQ",
+			"description": "Korean",
+			"placeAddress": "4428 Convoy St, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Dae Jang Keum",
+			"description": "Korean",
+			"placeAddress": "7905 Engineer Rd, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Do Re Mi House",
+			"description": "Korean",
+			"placeAddress": "8199 Clairemont Mesa Blvd #M, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Tofu House",
+			"description": "Korean",
+			"placeAddress": "4229 Convoy St, San Diego, CA 92111"
+		},
+		{
+			"placeName": "Five Guys",
+			"description": "Burgers",
+			"placeAddress": "Costa Verde Center, 8650 Genesee Ave, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Red Robin",
+			"description": "Burgers",
+			"placeAddress": "Westfield UTC, 4373 La Jolla Village Dr, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Draft Republic",
+			"description": "Burgers",
+			"placeAddress": "4282 Esplanade Ct, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Jeff's Burgers",
+			"description": "Burgers",
+			"placeAddress": "2152 Avenida De La Playa, La Jolla, CA 92037"
+		},
+		{
+			"placeName": "Smashburger",
+			"description": "Burgers",
+			"placeAddress": "1000 Prospect St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Burger Lounge",
+			"description": "Burgers",
+			"placeAddress": "1101 Wall St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "Woody's Burgers San Diego",
+			"description": "Burgers",
+			"placeAddress": "7070 Miramar Rd, La Jolla, San Diego, CA 92121"
+		},
+		{
+			"placeName": "Royal India Express",
+			"description": "Curry",
+			"placeAddress": "Westfield UTC, 4545 La Jolla Village Dr #E, San Diego, CA 92122"
+		},
+		{
+			"placeName": "Punjabi Tandoor",
+			"description": "Curry",
+			"placeAddress": "5424 Morehouse Dr, San Diego, CA 92121"
+		},
+		{
+			"placeName": "Tandoori Chef",
+			"description": "Curry",
+			"placeAddress": "613 Pearl St, La Jolla, San Diego, CA 92037"
+		},
+		{
+			"placeName": "India Palace",
+			"description": "Curry",
+			"placeAddress": "694 University Ave, La Jolla, CA 92103"
+		},
+		{
+			"placeName": "Foodworx",
+			"description": "Curry",
+			"placeAddress": "Sixth College, 9500 Gilman Dr, La Jolla, CA 92093"
+		} 		
 	]
 }
