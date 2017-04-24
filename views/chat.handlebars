@@ -104,21 +104,36 @@
                   console.log(messageContent);
 
                   $.ajax({
-                    url: 'https://api.yelp.com/v3/businesses/search',
+                    url: 'https://api.yelp.com/oauth2/token'
                     data: {
-                      term: messageContent,
-                      location: '3550 Lebon Drive, San Diego, 92122'
+                      grant_type: 'client_credentials',
+                      client_id: 'KXC96infFDZ2iOOox_LLbg',
+                      client_secret: 'eP6r7DHPtsnfQp9DltHDuQyN4ENFk1y71E1VBWfXX0B9DjXAVeoeWctji0ECc58i' 
                     },
-                      dataType: 'json',
-                      method: 'GET',
-                      success: function(response) {
-                        console.log(response);
-                      },
 
-                      error: function()  {
-                        console.log(response);
-                      }
+                    success: function(response)  {
+                      token = response.access_token;
+
+                      $.ajax({
+                        url: 'https://api.yelp.com/v3/businesses/search',
+                        data: {
+                          Authorization: 'Bearer ' + token,
+                          term: messageContent,
+                          location: '3550 Lebon Drive, San Diego, 92122'
+                        },
+                          dataType: 'json',
+                          method: 'GET',
+                          success: function(response) {
+                            console.log(response);
+                          },
+
+                          error: function()  {
+                            console.log(response);
+                          }
+                      });
+                    }
                   });
+
 
                   $.ajax({
                     url: '/foodplace',
