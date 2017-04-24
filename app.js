@@ -24,7 +24,7 @@ var about = require('./routes/about');
 
 var foodPlace = require('./routes/foodPlace');
 var set = require('./routes/set');
-var yelp = require('./routes/yelp');
+var yelpAPI = require('./routes/yelpAPI');
 
 // Example route
 // var user = require('./routes/user');
@@ -68,7 +68,7 @@ app.get('/get', set.getPreference);
 
 app.get('/newchat', newchat.view);
 app.get('/about', about.view);
-app.get('/yelp', yelp.getRestaurants);
+app.get('/yelpAPI', yelpAPI.getRestaurants);
 
 
 var server = http.createServer(app).listen(app.get('port'), function(){
