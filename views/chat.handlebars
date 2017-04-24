@@ -7,9 +7,9 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-	<link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'/ >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'/ >
   </head>
   <body>
   
@@ -19,33 +19,33 @@
       <a class="navbar-brand" href="../chat/">
         <img src="/images/icon.png" class="img" width="30"></img>  Food.AI</a>
         <a href="../about/" style="float: right; padding-right: 10px; padding-top: 15px;">About</a> 
-		<a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
-		<a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
-      	<a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px; color: white;">Chat</a>
+    <a href="../preferences/" style="float: right; padding-right: 10px; padding-top: 15px;">Preferences</a>      
+    <a href="../profile/" style="float: right; padding-right: 10px; padding-top: 15px;">Profile</a>
+        <a href="../chat/" style="float: right; padding-right: 10px; padding-top: 15px; color: white;">Chat</a>
     </div>
    
   </div>
 </nav>
-		<div class="section">
-			<div class="container">
-				<div class="row" style="padding-bottom: 50px;">
-					<div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
-						<ul id="messages">
-							<li class="animated fadeInUp"> Hey! What type of food are you feeling right now? Type "food" for a personalized random recommendation!</li>
-						</ul>
-							
-						<div class="row">
-							<div class="col-md-12">
-								<form action="">
-									<input id="m" autocomplete="off" style="width: 68%; max-width: 340px;"/>
-									<button style="width: 23%; border-radius: 5px; max-width: 120px;">Send</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="section">
+      <div class="container">
+        <div class="row" style="padding-bottom: 50px;">
+          <div class="col-md-6 col-md-offset-3" style="padding-top: 20px; padding-bottom: 50px;">
+            <ul id="messages">
+              <li class="animated fadeInUp"> Hey! What type of food are you feeling right now? Type "food" for a personalized random recommendation!</li>
+            </ul>
+              
+            <div class="row">
+              <div class="col-md-12">
+                <form action="">
+                  <input id="m" autocomplete="off" style="width: 68%; max-width: 340px;"/>
+                  <button style="width: 23%; border-radius: 5px; max-width: 120px;">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -64,12 +64,12 @@
 
     
 
-    		$('form').submit(function() {
-			socket.emit('chat message', $('#m').val());
-			$('#m').val('');
-			return false;
-    	});
-    	socket.on('chat message', function(msg) {
+        $('form').submit(function() {
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+      });
+      socket.on('chat message', function(msg) {
         counter += 1;
         console.log(counter);
 
@@ -103,7 +103,7 @@
                   messageContent = intentHashtable["food"][0]["value"];
                   console.log(messageContent);
 
-                  $.ajax({
+                  /*$.ajax({
                     url: 'https://api.yelp.com/oauth2/token',
                     data: {
                       grant_type: 'client_credentials',
@@ -121,7 +121,7 @@
                       $.ajax({
                         url: 'https://api.yelp.com/v3/businesses/search',
                         data: {
-                          Authorization: 'Bearer ' + token,
+                          Authorization: response.token_type + token,
                           term: messageContent,
                           location: '3550 Lebon Drive, San Diego, 92122'
                         },
@@ -136,8 +136,20 @@
                           }
                       });
                     }
-                  });
+                  })*/
 
+
+                  $.ajax({
+                    url: '/yelpAPI',
+                    data: {
+                      'food' : messageContent
+                    },
+                      dataType: 'json',
+                      method: 'GET',
+                      success: function(response) {
+                        console.log(response);
+                      }
+                  });
 
                   $.ajax({
                     url: '/foodplace',
@@ -218,12 +230,12 @@
                     foodSearched = false;
                   }
                   
-                  $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');				  
+                  $('#messages').append('<li class=\"animated fadeInUp\">' + message + '</li>');          
                 }
             }
           });
         }
-   	 });
+     });
 
 
 
