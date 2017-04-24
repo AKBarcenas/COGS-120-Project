@@ -112,6 +112,7 @@
                     },
 
                     success: function(response)  {
+                      console.log(response)
                       token = response.access_token;
 
                       $.ajax({
