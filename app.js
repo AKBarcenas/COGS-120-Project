@@ -69,7 +69,7 @@ app.get('/get', set.getPreference);
 
 app.get('/newchat', newchat.view);
 app.get('/about', about.view);
-//app.get('/yelpAPI', yelpAPI.getRestaurants);
+app.get('/yelpAPI', yelpAPI.getRestaurants);
 //app.get('/yelpAPI', yelpAPI.getRestaurants);
 
 
