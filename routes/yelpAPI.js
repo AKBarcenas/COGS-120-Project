@@ -3,7 +3,7 @@ const yelp = require('yelp-fusion');
 const clientId = 'KXC96infFDZ2iOOox_LLbg';
 const clientSecret = 'eP6r7DHPtsnfQp9DltHDuQyN4ENFk1y71E1VBWfXX0B9DjXAVeoeWctji0ECc58i';
 
-exports.getRestaurants = funcion(req, res)  {
+exports.getRestaurants = function(req, res)  {
 	var food = req.query.food;
 
 	const searchRequest = {
