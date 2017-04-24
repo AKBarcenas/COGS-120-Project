@@ -24,6 +24,7 @@ var about = require('./routes/about');
 
 var foodPlace = require('./routes/foodPlace');
 var set = require('./routes/set');
+var set2 = require('./routes/set');
 //var yelpAPI = require('./routes/yelpAPI');
 //var yelpAPI = require('./routes/yelpAPI');
 
